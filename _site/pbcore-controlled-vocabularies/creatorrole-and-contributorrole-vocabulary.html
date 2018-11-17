@@ -1,0 +1,776 @@
+<!doctype html>
+<html>
+  <head>
+    <head>
+  <meta charset="utf-8">
+  <title>Creatorrole And Contributorrole Vocabulary</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+
+  <link href="/assets/css/a11y-dark.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/assets/highlight.pack.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
+
+      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
+        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+        if($(this).hasClass(start+'arrow-down')){
+          $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
+        }
+        else if($(this).hasClass(start+'arrow-up')){
+          $(this).removeClass(start+'arrow-up').addClass(start+'arrow-down')
+        }
+      })
+
+      $('#expand-all').click(function() {
+        console.log('hey dummy')
+        if($(this).hasClass('open')){
+          $('.collapse').collapse('hide');
+          $(this).removeClass('open').addClass('closed');
+        } else {
+          $('.collapse').collapse('show');
+          $(this).removeClass('closed').addClass('open');
+        }
+      });
+
+      var accordion_ids=Cookies.get('accordionDisplay');
+      if (accordion_ids!=null) {
+          //show the open_accordions visible group
+          $(accordion_ids).collapse("show");
+      }
+
+      $(document).on('shown.bs.collapse hidden.bs.collapse', function() {
+        var active_accs = $("div.elements.collapse.show[id^=collapse]")
+        var active_ids = $.map(active_accs, function(ele){
+          return '#' + ele.id;
+        }).join(',');
+
+        Cookies.set('accordionDisplay', active_ids)
+      });
+    });
+
+  </script>
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="PBCore Metadata Standard" />
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Creatorrole And Contributorrole Vocabulary | PBCore Metadata Standard</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Creatorrole And Contributorrole Vocabulary" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html" />
+<meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html" />
+<meta property="og:site_name" content="PBCore Metadata Standard" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html","headline":"Creatorrole And Contributorrole Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <header>
+  <nav class="primary_nav_container navbar navbar-expand-xl navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-light" style="min-height:9em;height:9em;">
+
+    <div class="navbar-collapse" id="navbarNavDropdown">
+
+      <div style="margin-left:5.7%; margin-bottom:2.0%;overflow-y:visible; z-index: 10000;">
+          <a href="http://localhost:4000"><img src="/assets/images/pbcore-logo.png" alt=""></a>
+      </div>
+      <ul style="margin-left:6.1%; bottom: 0; position: absolute;" class="navbar-nav">
+
+        <li class="nav-item dropdown menu_about">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+
+          <div class="dropdown-menu menu_about" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/faqs.html">FAQs</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/glossary.html">Glossary</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/credits.html">Credits</a>
+                
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_schema">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Schema
+          </a>
+
+          <div class="dropdown-menu menu_schema" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/elements.html">Elements</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/attributes.html">Attributes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/xsd.html">XML Schema</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/data-model.html">Data Model Visualization</a>
+                
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_resources">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu menu_resources" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/validator.html">PBCore XML Validator</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/mappings.html">Mappings</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/sample-records.html">Sample Records</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/tutorials.html">Tutorials</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/presentations.html">Presentations</a>
+                
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_community">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Community
+          </a>
+          <div class="dropdown-menu menu_community" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-users.html">PBCore Users</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/user-groups.html">User Groups</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/news.html">News and Updates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/contact.html">Contact Us</a>
+                
+              
+            
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="margin-top:6em; margin-bottom:3.6em;">
+          <div class="row">
+  <div class="col-md-3">
+    <nav class="sidebar-nav">
+  <a href="http://localhost:4000/pbcore-controlled-vocabularies">
+    <h3 style="border-bottom: 1px solid black;" class="green bold">Vocabularies</h3>
+  </a>
+
+
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/pbcoreassettype-vocabulary.html">pbcoreAssetType</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/datetype-vocabulary.html">@dateType
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/titletype-vocabulary.html">@titleType
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html">@descriptionType
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html">pbcoreRelationType</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html">instantiationRelationType</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html">creatorRole and contributorRole</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/publisherrole-vocabulary.html">publisherRole</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html">instantiationPhysical: Audio
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html">instantiationPhysical: Film
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html">instantiationPhysical: Video
+</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationmediatype-vocabulary.html">instantiationMediaType</a>
+    </h5>
+  
+    <h5>
+      <a href="/pbcore-controlled-vocabularies/instantiationgenerations-vocabulary.html">instantiationGenerations</a>
+    </h5>
+  
+</nav>
+
+  </div>
+  <div class="col-md-9">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="green">creatorRole and contributorRole Vocabulary</h2>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 1em; margin-bottom: 1em; padding-left: 1em; font-size: 18px;">
+      <div class="col-md-12">
+        
+          <span class="green">Element(s): </span><span>creatorRole, contributorRole</span>
+        
+      </div>
+    </div>
+
+    
+      <h3 class="green">Terms</h3>
+
+      <ul class="attribute-container" style="padding-left: 1em;">
+        
+          <li>
+            <div class="bolder attribute-name">Actor:</div>
+            <div class="attribute-note">Person playing a character role in the production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Artist:</div>
+            <div class="attribute-note">Person primarily responsible for the artistic content of the production, or the visual content contained in the media work, and who may hold copyright to it – for example, a video artist like Andy Warhol, or a painter commissioned to provide a visual work for the production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Artist Director:</div>
+            <div class="attribute-note">Person responsible for unifying the feel and vision of a television production, film production, theatrical company, etc.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Associate Producer:</div>
+            <div class="attribute-note">Person who takes on responsibilities delegated to them by the Producer. They work on the development and pre-production stages, and on the production. Duties can range from supervising the production design team or post production, or co-ordinating the work of visual effects companies. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Author:</div>
+            <div class="attribute-note">Person primarily responsible for the intellectual content of the production and who may hold copyright to it – for example, a novelist whose work is adapted into a film.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Broadcast Engineer:</div>
+            <div class="attribute-note">Person who works with hardware and broadcast systems that are used across television, radio and new media to broadcast and distribute programs.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Camera Operator:</div>
+            <div class="attribute-note">Person responsible for manning the camera. Several people may fill this role on one production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Caption Writer:</div>
+            <div class="attribute-note">Person or organization responsible for editing/adding closed captioning.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Casting Director:</div>
+            <div class="attribute-note">Person responsible for initially finding the cast members chosen for a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Choreographer:</div>
+            <div class="attribute-note">Person responsible for selection or creation of dance compositions and plans and arranges dance movements and patterns for dances and especially for ballets.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Cinematographer:</div>
+            <div class="attribute-note">See Director of Photography, the recommended term for this position.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Co-Producer:</div>
+            <div class="attribute-note">Person who performs a substantial portion of a creative producing function, or who is primarily responsible for one or more managerial producing functions. A co-producer has less responsibility than a producer for the completion of a project. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Commentator:</div>
+            <div class="attribute-note">Person who discusses news, sports events, weather, or the like, as on television or radio.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Composer:</div>
+            <div class="attribute-note">Person who writes music for a specific production, or who is responsible for the artistic content of a piece of music used within a specific production and who may own copyright to that content. Composers of specific elements (for example, theme music) may be identified in an annotation.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Concept Artist:</div>
+            <div class="attribute-note">Person who produces an artistic rendering of an element or elements in a film, TV show, or video game, created as part of the development and visualization of characters, costumes, environments, etc.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Conductor:</div>
+            <div class="attribute-note">Person who directs the performance of an orchestra or choir.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Costume Designer:</div>
+            <div class="attribute-note">Person responsible for designing and creating costumes and wardrobe for a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Describer:</div>
+            <div class="attribute-note">Person or organization responsible for describing key visual elements in a production for visually-impaired viewers.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Director:</div>
+            <div class="attribute-note">Person who supervises the actors, camera crew, and other staff for a movie, play, television program, or similar production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Director of Photography:</div>
+            <div class="attribute-note">Cinematographer or director of photography (sometimes shortened to DP or DOP) is the chief over the camera crews working on a film, television production or other live action piece and is responsible for achieving artistic and technical decisions related to the image.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Editor:</div>
+            <div class="attribute-note">Person who assembles the footage for a production into the final end product.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Executive Producer:</div>
+            <div class="attribute-note">Person who secures funding for a production and oversees financial and organizational aspects of the production’s development.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Filmmaker:</div>
+            <div class="attribute-note">The person most prominently responsible for the making of a film, especially if they are involved in all phases of production – for example, an independent or experimental filmmaker.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Foley Artist:</div>
+            <div class="attribute-note">Person that uses objects to create (or recreate) sound on a foley sound stage to be added to the final audio mix, such as footsteps, the opening and closing doors, or mechanical sounds.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Graphic Designer:</div>
+            <div class="attribute-note">Person who creates and designs visual elements for a production, such as logos, posters or brochures.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Graphic Editor:</div>
+            <div class="attribute-note">Person who assembles graphics and animation for a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Guest:</div>
+            <div class="attribute-note">Person who is invited to appear on one or several episodes of a television show, but is not a regular part of the cast or crew.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Host:</div>
+            <div class="attribute-note">Person who introduces a television or radio program, presents the various program elements, and interviews any guests.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Interviewee:</div>
+            <div class="attribute-note">Person being interviewed.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Interviewee:</div>
+            <div class="attribute-note">Person who asks the questions during an interview.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Lighting Technician:</div>
+            <div class="attribute-note">Person responsible for the creation of the lighting design for a given production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Make-Up Artist:</div>
+            <div class="attribute-note">Person responsible for designing and creating make-up and prosthetic effects for a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Moderator:</div>
+            <div class="attribute-note">Person who moderates a discussion.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Music Supervisor:</div>
+            <div class="attribute-note">Person responsible for working with the director and composer of a production to manage, select, and/or edit music for the production; this may also be identified as music director or music editor.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Musician:</div>
+            <div class="attribute-note">Player of a musical instrument.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Narrator:</div>
+            <div class="attribute-note">Person whose voice explains what is happening in a television program or movie, but who generally is not seen.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Panelist:</div>
+            <div class="attribute-note">Member of a small group of persons gathered for formal public discussion, judging, or playing a radio or television game.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Performer:</div>
+            <div class="attribute-note">Broader term for Actor, Musician, Vocalist or Comedian. A ​person who ​entertains ​people by ​acting, ​singing, ​dancing, ​playing ​music, or providing some other form of entertainment.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Performing Group:</div>
+            <div class="attribute-note">Company, band, or group of performers who work together to ​entertain ​people by ​dancing, ​singing, ​acting, ​playing ​music, or providing some other form of entertainment.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Photographer:</div>
+            <div class="attribute-note">Person who ​takes ​photographs. In film and television this person may be called a unit still photographer or simply, still photographer, who creates still photographic images intended for use in promotion, continuity and documentation of films and television productions.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Producer:</div>
+            <div class="attribute-note">Person who initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative. A Producer is involved throughout all phases of production from inception to completion. A production may have more than one producer.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Production Unit:</div>
+            <div class="attribute-note">Corporate sub-entity or department that initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Recording Engineer:</div>
+            <div class="attribute-note">Person who operates consoles and other equipment to record, control, replay, and mix sound from various live performances and in the production of radio, television, music, and film. Recording Engineers may also be called Sound Recordists, Sound Mixers, or Audio Engineers. There are also specialized engineers such as Sound Engineers (for film sets), ADR Recordists, and Foley Recordists.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Reporter:</div>
+            <div class="attribute-note">Person who conducts interviews, reports events, or presents news information for a broadcast.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Sound Designer:</div>
+            <div class="attribute-note">Person who works closely with the production team to design any required sounds to include in a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Sound Editor:</div>
+            <div class="attribute-note">Person who creates the soundtrack by cutting and synchronizing all sound elements. There may be specialized editors for specific sound element types as well, such as a Sound Effects Editor.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Set Designer:</div>
+            <div class="attribute-note">Person who designs and creates the set for a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Speaker:</div>
+            <div class="attribute-note">Broad term for a person whose speech or lecture is included in a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Technical Director:</div>
+            <div class="attribute-note">Most senior technical person on a production team, who oversees the technical quality of the production and/or supervises the technical crew. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Video Engineer:</div>
+            <div class="attribute-note">Person who is responsible for technical aspects of video recording and production systems. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Vocalist:</div>
+            <div class="attribute-note">Person who sings or otherwise vocally contributes a production or a composition used in a production.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Voiceover Artist:</div>
+            <div class="attribute-note">Unseen performer who adds their voice to the production in various ways, such as for animated characters or when dubbing into another language. For musical performances use Vocalist.</div>
+          </li>
+        
+          <li>
+            <div class="bolder attribute-name">Writer:</div>
+            <div class="attribute-note">Person who created or contributed to the script of a production; usually involved with the production as a work-for-hire.</div>
+          </li>
+        
+      </ul>
+    
+
+    <!-- <h3 class="green">Example</h3> -->
+    
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left" style="margin-top:1%;">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="http://localhost:4000">Home</a>
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/faqs.html">FAQs</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/glossary.html">Glossary</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/credits.html">Credits</a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          <li>
+            <a href="http://localhost:4000/license.html">License Details</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+        <ul class="list-unstyled">
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/elements.html">Elements</a></li>
+            
+            <li><a href="http://localhost:4000/attributes.html">Attributes</a></li>
+            
+            <li><a href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a></li>
+            
+            <li><a href="http://localhost:4000/xsd.html">XML Schema</a></li>
+            
+            <li><a href="http://localhost:4000/data-model.html">Data Model Visualization</a></li>
+            
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a></li>
+            
+            <li><a href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a></li>
+            
+            <li><a href="http://localhost:4000/validator.html">PBCore XML Validator</a></li>
+            
+            <li><a href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a></li>
+            
+            <li><a href="http://localhost:4000/mappings.html">Mappings</a></li>
+            
+            <li><a href="http://localhost:4000/sample-records.html">Sample Records</a></li>
+            
+            <li><a href="http://localhost:4000/tutorials.html">Tutorials</a></li>
+            
+            <li><a href="http://localhost:4000/presentations.html">Presentations</a></li>
+            
+            
+          
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/pbcore-users.html">PBCore Users</a></li>
+            
+            <li><a href="http://localhost:4000/user-groups.html">User Groups</a></li>
+            
+            <li><a href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a></li>
+            
+            <li><a href="http://localhost:4000/news.html">News and Updates</a></li>
+            
+            <li><a href="http://localhost:4000/contact.html">Contact Us</a></li>
+            
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <div class="row">
+      <div class="col-md-6" style="top: -1.2em;">
+        <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
+        <div class="footer-copyright">PBCore</div>
+        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
+      </div>
+
+      <div class="col-md-6 footer-msg">
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

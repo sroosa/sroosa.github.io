@@ -1,0 +1,1484 @@
+<!doctype html>
+<html>
+  <head>
+    <head>
+  <meta charset="utf-8">
+  <title>Instantiationextension</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+
+  <link href="/assets/css/a11y-dark.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/assets/highlight.pack.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
+
+      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
+        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+        if($(this).hasClass(start+'arrow-down')){
+          $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
+        }
+        else if($(this).hasClass(start+'arrow-up')){
+          $(this).removeClass(start+'arrow-up').addClass(start+'arrow-down')
+        }
+      })
+
+      $('#expand-all').click(function() {
+        console.log('hey dummy')
+        if($(this).hasClass('open')){
+          $('.collapse').collapse('hide');
+          $(this).removeClass('open').addClass('closed');
+        } else {
+          $('.collapse').collapse('show');
+          $(this).removeClass('closed').addClass('open');
+        }
+      });
+
+      var accordion_ids=Cookies.get('accordionDisplay');
+      if (accordion_ids!=null) {
+          //show the open_accordions visible group
+          $(accordion_ids).collapse("show");
+      }
+
+      $(document).on('shown.bs.collapse hidden.bs.collapse', function() {
+        var active_accs = $("div.elements.collapse.show[id^=collapse]")
+        var active_ids = $.map(active_accs, function(ele){
+          return '#' + ele.id;
+        }).join(',');
+
+        Cookies.set('accordionDisplay', active_ids)
+      });
+    });
+
+  </script>
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="PBCore Metadata Standard" />
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Instantiationextension | PBCore Metadata Standard</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Instantiationextension" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&lt;pbcoreInstantiation&gt; &lt;!-- No data here directly; it&#39;s within sub-elements instead --&gt; &lt;instantiationExtension&gt; &lt;extensionWrap&gt; &lt;extensionElement&gt;RightsHolderName&lt;/extensionElement&gt; &lt;extensionValue&gt;WNET.org&lt;/extensionValue&gt; &lt;extensionAuthorityUsed&gt;http://www.loc.gov/standards/rights/METSRights.xsd&lt;/extensionAuthorityUsed&gt; &lt;/extensionWrap&gt; &lt;/instantiationExtension&gt; &lt;/pbcoreInstantiation&gt;" />
+<meta property="og:description" content="&lt;pbcoreInstantiation&gt; &lt;!-- No data here directly; it&#39;s within sub-elements instead --&gt; &lt;instantiationExtension&gt; &lt;extensionWrap&gt; &lt;extensionElement&gt;RightsHolderName&lt;/extensionElement&gt; &lt;extensionValue&gt;WNET.org&lt;/extensionValue&gt; &lt;extensionAuthorityUsed&gt;http://www.loc.gov/standards/rights/METSRights.xsd&lt;/extensionAuthorityUsed&gt; &lt;/extensionWrap&gt; &lt;/instantiationExtension&gt; &lt;/pbcoreInstantiation&gt;" />
+<link rel="canonical" href="http://localhost:4000/elements/instantiationextension.html" />
+<meta property="og:url" content="http://localhost:4000/elements/instantiationextension.html" />
+<meta property="og:site_name" content="PBCore Metadata Standard" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/elements/instantiationextension.html","headline":"Instantiationextension","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/elements/instantiationextension.html"},"description":"&lt;pbcoreInstantiation&gt; &lt;!-- No data here directly; it&#39;s within sub-elements instead --&gt; &lt;instantiationExtension&gt; &lt;extensionWrap&gt; &lt;extensionElement&gt;RightsHolderName&lt;/extensionElement&gt; &lt;extensionValue&gt;WNET.org&lt;/extensionValue&gt; &lt;extensionAuthorityUsed&gt;http://www.loc.gov/standards/rights/METSRights.xsd&lt;/extensionAuthorityUsed&gt; &lt;/extensionWrap&gt; &lt;/instantiationExtension&gt; &lt;/pbcoreInstantiation&gt;","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <header>
+  <nav class="primary_nav_container navbar navbar-expand-xl navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-light" style="min-height:9em;height:9em;">
+
+    <div class="navbar-collapse" id="navbarNavDropdown">
+
+      <div style="margin-left:5.7%; margin-bottom:2.0%;overflow-y:visible; z-index: 10000;">
+          <a href="http://localhost:4000"><img src="/assets/images/pbcore-logo.png" alt=""></a>
+      </div>
+      <ul style="margin-left:6.1%; bottom: 0; position: absolute;" class="navbar-nav">
+
+        <li class="nav-item dropdown menu_about">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+
+          <div class="dropdown-menu menu_about" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/faqs.html">FAQs</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/glossary.html">Glossary</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/credits.html">Credits</a>
+                
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_schema">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Schema
+          </a>
+
+          <div class="dropdown-menu menu_schema" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/elements.html">Elements</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/attributes.html">Attributes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/xsd.html">XML Schema</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/data-model.html">Data Model Visualization</a>
+                
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_resources">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu menu_resources" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/validator.html">PBCore XML Validator</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/mappings.html">Mappings</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/sample-records.html">Sample Records</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/tutorials.html">Tutorials</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/presentations.html">Presentations</a>
+                
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_community">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Community
+          </a>
+          <div class="dropdown-menu menu_community" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-users.html">PBCore Users</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/user-groups.html">User Groups</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/news.html">News and Updates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/contact.html">Contact Us</a>
+                
+              
+            
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="margin-top:6em; margin-bottom:3.6em;">
+          <div class="row">
+  <div class="col-md-3">
+    <nav class="sidebar-nav"">
+  <h3 class="green bold">
+    Elements
+  </h3>
+
+  <a class="green small-text open" id="expand-all">
+    <img class="expand-elements-icon" src="/assets/images/icons/expand-elements.png" alt="">
+    Expand all subelements
+
+    <span style="min-height: 1px; display: block;"></span>
+  </a>
+
+  <div id="element-accordion" class="">
+    
+    <div class="card separator">
+      <div class="card-header top" id="headingRoot"  data-toggle="collapse" data-target="#collapseRoot" aria-expanded="false" aria-controls="collapseRoot">
+        <h4 class="mb-0 ">
+          <a class="bold black" href="/elements/root">
+            ROOT
+          </a>
+        </h4>
+      </div>
+      <div id="collapseRoot" class="collapse elements show" aria-labelledby="headingRoot">
+        <div class="card-body sidebar-indent">
+          
+            
+              
+                
+                <h5 class="card-guy ">
+                  <a href="http://localhost:4000/elements/pbcorecollection">
+                    pbcoreCollection
+                  </a>
+                </h5>
+              
+                
+                <h5 class="card-guy ">
+                  <a href="http://localhost:4000/elements/pbcoredescriptiondocument">
+                    pbcoreDescriptionDocument
+                  </a>
+                </h5>
+              
+                
+                <h5 class="card-guy ">
+                  <a href="http://localhost:4000/elements/pbcoreinstantiationdocument">
+                    pbcoreInstantiationDocument
+                  </a>
+                </h5>
+              
+            
+          
+            
+          
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="card separator">
+      <div class="card-header top" id="headingAsset" data-toggle="collapse" data-target="#collapseAsset" aria-expanded="false" aria-controls="collapseAsset">
+        <h4 class="mb-0 ">
+          <a class="bold black" href="/elements/asset">
+            ASSET
+          </a>
+        </h4>
+      </div>
+      <div id="collapseAsset" class="collapse elements show" aria-labelledby="headingAsset">
+        <div class="card-body sidebar-indent">
+          
+            
+          
+            
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreassettype">
+                      pbcoreAssetType
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreassetdate">
+                      pbcoreAssetDate
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreidentifier">
+                      pbcoreIdentifier
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoretitle">
+                      pbcoreTitle
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoresubject">
+                      pbcoreSubject
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoredescription">
+                      pbcoreDescription
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoregenre">
+                      pbcoreGenre
+                    </a>
+                  </h5>
+                
+              
+                
+                  
+                  <div id="1-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading1">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorerelation">
+                            pbcoreRelation
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse1" class="collapse elements" aria-labelledby="heading1">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/pbcorerelationtype">pbcoreRelationType</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/pbcorerelationidentifier">pbcoreRelationIdentifer</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+                  
+                  <div id="2-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading2">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorecoverage">
+                            pbcoreCoverage
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse2" class="collapse elements" aria-labelledby="heading2">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/coverage">coverage</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/coveragetype">coverageType</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreaudiencelevel">
+                      pbcoreAudienceLevel
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreaudiencerating">
+                      pbcoreAudienceRating
+                    </a>
+                  </h5>
+                
+              
+                
+                  
+                  <div id="3-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading3">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorecreator">
+                            pbcoreCreator
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse3" class="collapse elements" aria-labelledby="heading3">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/creator">creator</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/creatorrole">creatorRole</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+                  
+                  <div id="4-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading4">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorecontributor">
+                            pbcoreContributor
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse4" class="collapse elements" aria-labelledby="heading4">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/contributor">contributor</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/contributorrole">contributorRole</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+                  
+                  <div id="5-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading5">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorepublisher">
+                            pbcorePublisher
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse5" class="collapse elements" aria-labelledby="heading5">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/publisher">publisher</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/publisherrole">publisherRole</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+                  
+                  <div id="6-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading6">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcorerightssummary">
+                            pbcoreRightsSummary
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse6" class="collapse elements" aria-labelledby="heading6">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/rightssummary">rightsSummary</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/rightslink">rightsLink</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/rightsembedded">rightsEmbedded</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcorepart">
+                      pbcorePart
+                    </a>
+                  </h5>
+                
+              
+                
+
+                  
+                  <h5 class="card-guy ">
+                    <a href="http://localhost:4000/elements/pbcoreannotation">
+                      pbcoreAnnotation
+                    </a>
+                  </h5>
+                
+              
+                
+                  
+                  <div id="7-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading7">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                          <span class="element-arrow-icon element-arrow-down"></span>
+                          <a href="http://localhost:4000/elements/pbcoreextension">
+                            pbcoreExtension
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse7" class="collapse elements" aria-labelledby="heading7">
+                        <div class="card-body sidebar-indent">
+                          
+                            
+                              
+                              <div id="8-accordion" class="">
+                                <div class="card">
+                                  <div class="card-header" id="heading8">
+
+                                    
+                                    <h5 class="collapsed " data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                                      <span class="element-arrow-icon element-arrow-down"></span>
+                                      <a href="http://localhost:4000/elements/extensionwrap">
+                                        extensionWrap
+                                      </a>
+                                    </h5>
+                                  </div>
+                                  <div id="collapse8" class="collapse elements" aria-labelledby="heading8">
+                                    <div class="card-body sidebar-indent">
+                                      
+
+                                        
+                                        <h5 class="card-guy ">
+                                          <a href="http://localhost:4000/elements/extensionelement">
+                                            extensionElement
+                                          </a>
+                                        </h5>
+                                      
+
+                                        
+                                        <h5 class="card-guy ">
+                                          <a href="http://localhost:4000/elements/extensionvalue">
+                                            extensionValue
+                                          </a>
+                                        </h5>
+                                      
+
+                                        
+                                        <h5 class="card-guy ">
+                                          <a href="http://localhost:4000/elements/extensionauthorityused">
+                                            extensionAuthorityUsed
+                                          </a>
+                                        </h5>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/extensionEmbedded">extensionEmbedded</a></h5>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+            
+          
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="card separator">
+      <div class="card-header top" id="headingInstantiation" data-toggle="collapse" data-target="#collapseInstantiation" aria-expanded="false" aria-controls="collapseInstantiation">
+
+        <h4 class="mb-0 ">
+          <a class="bold black" href="/elements/instantiation">
+            INSTANTIATION
+          </a>
+        </h4>
+      </div>
+      <div id="collapseInstantiation" class="collapse elements show" aria-labelledby="headingInstantiation">
+        <div class="card-body sidebar-indent">
+          
+            
+          
+            
+          
+            
+              
+                
+                  
+                  <div id="9-accordion" class="">
+                    <div class="card">
+                      <div class="card-header" id="heading9">
+
+                        
+                        <h5 class="collapsed " data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                          <a href="http://localhost:4000/elements/pbcoreInstantiation">
+                            pbcoreInstantiation
+                          </a>
+                          <span class="element-arrow-icon element-arrow-down"></span>
+
+                        </h5>
+                      </div>
+                      <div id="collapse9" class="collapse elements" aria-labelledby="heading9">
+                        <div class="card-body ">
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationidentifier">instantiationIdentifer</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationdate">instantiationDate</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationdimensions">instantiationDimensions</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationphysical">instantiationPhysical</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationdigital">instantiationDigital</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationstandard">instantiationStandard</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationlocation">instantiationLocation</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationmediatype">instantiationMediaType</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationgenerations">instantiationGenerations</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationtimestart">instantiationTimeStart</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationfilesize">instantiationFileSize</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationduration">instantiationDuration</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationdatarate">instantiationDataRate</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationcolors">instantiationColors</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationtracks">instantiationTracks</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationchannelconfiguration">instantiationChannelConfiguration</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationlanguage">instantiationLangauge</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationalternativemodes">instantiationAlternativeModes</a></h5>
+                            
+                          
+                            
+                              
+                              <div id="10-accordion" class="">
+                                <div class="card">
+                                  <div class="card-header" id="heading10">
+
+                                    
+                                    <h5 class="collapsed " data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                      <span class="element-arrow-icon element-arrow-down"></span>
+                                      <a href="http://localhost:4000/elements/instantiationessencetrack">
+                                        instantiationEssenceTrack
+                                      </a>
+                                    </h5>
+                                  </div>
+                                  <div id="collapse10" class="collapse elements" aria-labelledby="heading10">
+                                    <div class="card-body sidebar-indent">
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetracktype">
+                                              essenceTrackType
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackidentifier">
+                                              essenceTrackIdentifier
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackstandard">
+                                              essenceTrackStandard
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackencoding">
+                                              essenceTrackEncoding
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackdatarate">
+                                              essenceTrackDataRate
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackframerate">
+                                              essenceTrackFrameRate
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackplaybackspeed">
+                                              essenceTrackPlaybackSpeed
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetracksamplingrate">
+                                              essenceTrackSamplingRate
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackbitdepth">
+                                              essenceTrackBitDepth
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackframesize">
+                                              essenceTrackFrameSize
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackaspectratio">
+                                              essenceTrackAspectRatio
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetracktimestart">
+                                              essenceTrackTimeStart
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackduration">
+                                              essenceTrackDuration
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetracklanguage">
+                                              essenceTrackLanguage
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/essencetrackannotation">
+                                              essenceTrackAnnotation
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+                                          
+                                          <div id="11-accordion" class="">
+                                            <div class="card">
+                                              <div class="card-header" id="heading11">
+
+                                                
+                                                <h5 class="collapsed " data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                                                  <span class="element-arrow-icon element-arrow-down"></span>
+                                                  <a href="http://localhost:4000/elements/essencetrackextension">
+                                                    essenceTrackExtension
+                                                  </a>
+                                                </h5>
+                                              </div>
+                                              <div id="collapse11" class="collapse elements" aria-labelledby="heading11">
+                                                <div class="card-body sidebar-indent">
+                                                  
+
+                                                    
+                                                    <h5 class="card-guy /elements/instantiationextension.html/elements/extensionwrap.html">
+                                                      <a href="http://localhost:4000/elements/extensionwrap">
+                                                        extensionWrap
+                                                      </a>
+                                                    </h5>
+                                                  
+
+                                                    
+                                                    <h5 class="card-guy /elements/instantiationextension.html/elements/extensionembedded.html">
+                                                      <a href="http://localhost:4000/elements/extensionembedded">
+                                                        extensionEmbedded
+                                                      </a>
+                                                    </h5>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                          
+                            
+                              
+                              <div id="12-accordion" class="">
+                                <div class="card">
+                                  <div class="card-header" id="heading12">
+
+                                    
+                                    <h5 class="collapsed " data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                      <span class="element-arrow-icon element-arrow-down"></span>
+                                      <a href="http://localhost:4000/elements/instantiationrelation">
+                                        instantiationRelation
+                                      </a>
+                                    </h5>
+                                  </div>
+                                  <div id="collapse12" class="collapse elements" aria-labelledby="heading12">
+                                    <div class="card-body sidebar-indent">
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/instantiationrelationtype">
+                                              instantiationRelationType
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/instantiationrelationidentifier">
+                                              instantiationRelationIdentifier
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                          
+                            
+                              
+                              <div id="13-accordion" class="">
+                                <div class="card">
+                                  <div class="card-header" id="heading13">
+
+                                    
+                                    <h5 class="collapsed " data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                                      <span class="element-arrow-icon element-arrow-down"></span>
+                                      <a href="http://localhost:4000/elements/instantiationrights">
+                                        instantiationRights
+                                      </a>
+                                    </h5>
+                                  </div>
+                                  <div id="collapse13" class="collapse elements" aria-labelledby="heading13">
+                                    <div class="card-body sidebar-indent">
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/rightssummary">
+                                              rightsSummary
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/rightslink">
+                                              rightsLink
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/rightsembedded">
+                                              rightsEmbedded
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationannotation">instantiationAnnotation</a></h5>
+                            
+                          
+                            
+                                
+                                <h5 class="card-guy "><a href="http://localhost:4000/elements/instantiationpart">instantiationPart</a></h5>
+                            
+                          
+                            
+                              
+                              <div id="14-accordion" class="">
+                                <div class="card">
+                                  <div class="card-header" id="heading14">
+
+                                    
+                                    <h5 class="collapsed ele-highlight" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                                      <span class="element-arrow-icon element-arrow-down"></span>
+                                      <a href="http://localhost:4000/elements/instantiationextension">
+                                        instantiationExtension
+                                      </a>
+                                    </h5>
+                                  </div>
+                                  <div id="collapse14" class="collapse elements" aria-labelledby="heading14">
+                                    <div class="card-body sidebar-indent">
+                                      
+                                        
+                                          
+                                          <div id="15-accordion" class="">
+                                            <div class="card">
+                                              <div class="card-header" id="heading15">
+
+                                                
+                                                <h5 class="collapsed " data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                                                  <span class="element-arrow-icon element-arrow-down"></span>
+                                                  <a href="http://localhost:4000/elements/extensionwrap">
+                                                    extensionWrap
+                                                  </a>
+                                                </h5>
+                                              </div>
+                                              <div id="collapse15" class="collapse elements" aria-labelledby="heading15">
+                                                <div class="card-body sidebar-indent">
+                                                  
+
+                                                    
+                                                    <h5 class="card-guy /elements/instantiationextension.html/elements/extensionelement.html">
+                                                      <a href="http://localhost:4000/elements/extensionelement">
+                                                        extensionElement
+                                                      </a>
+                                                    </h5>
+                                                  
+
+                                                    
+                                                    <h5 class="card-guy /elements/instantiationextension.html/elements/extensionvalue.html">
+                                                      <a href="http://localhost:4000/elements/extensionvalue">
+                                                        extensionValue
+                                                      </a>
+                                                    </h5>
+                                                  
+
+                                                    
+                                                    <h5 class="card-guy /elements/instantiationextension.html/elements/extensionauthorityused.html">
+                                                      <a href="http://localhost:4000/elements/extensionauthorityused">
+                                                        extensionAuthorityUsed
+                                                      </a>
+                                                    </h5>
+                                                  
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        
+                                      
+                                        
+
+                                          
+                                          <h5 class="card-guy ">
+                                            <a href="http://localhost:4000/elements/extensionembedded">
+                                              extensionEmbedded
+                                            </a>
+                                          </h5>
+                                        
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+  </div>
+  <div class="col-md-9">
+
+    <span class="definition-icon def-elements"></span>
+
+    <h3 class="green">Elements defined</h3>
+
+    <h2 class="ele-title-highlight">instantiationExtension</h2>
+
+    <p><strong>instantiationExtension</strong> is an extension element. Extensions are either a wrapper containing a specific element from another standard OR embedded xml containing the extension.</p>
+
+    
+
+      <p><span class="green">Best Practice: </span><span>Use it to supplement other metadata sub-elements of ‘instantiationPart’ or ‘pbcoreInstantiationDocument’ in which it appears.</span></p>
+    
+
+    <p><span class="green">Usage: </span><span>optional, repeatable</span></p>
+
+    <h3 class="green">Attributes</h3>
+
+    
+
+      <p>This element cannot have any attributes.</p>
+    
+
+    <h3 class="green">Subelements</h3>
+
+    
+      <ul class="attribute-container">
+        
+          <li>
+            <span class="bolder attribute-name">extensionWrap: </span>
+            <span class="attribute-note">required ONLY if extensionEmbedded is not used</span>
+            | <span class="attribute-def"><strong>extensionWrap</strong> serves as a container for the elements extensionElement, extensionValue, and extensionAuthorityUsed.</span>
+          </li>
+        
+          <li>
+            <span class="bolder attribute-name">extensionEmbedded: </span>
+            <span class="attribute-note">required ONLY if extensionWrap is not used</span>
+            | <span class="attribute-def"><strong>extensionEmbedded</strong> is an element allows the inclusion of xml from another schema, e.g. TEI, METS, etc.</span>
+          </li>
+        
+      </ul>
+    
+
+    <h3 class="green">Example</h3>
+
+    <pre>
+  <code>
+    &lt;pbcoreInstantiation&gt;<br />
+      &lt;!-- No data here directly; it's within sub-elements instead --&gt;<br />
+        &lt;instantiationExtension&gt;<br />
+            &lt;extensionWrap&gt;<br />
+                &lt;extensionElement&gt;RightsHolderName&lt;/extensionElement&gt;<br />
+                &lt;extensionValue&gt;WNET.org&lt;/extensionValue&gt;<br />
+                &lt;extensionAuthorityUsed&gt;http://www.loc.gov/standards/rights/METSRights.xsd&lt;/extensionAuthorityUsed&gt;
+            &lt;/extensionWrap&gt;<br />
+        &lt;/instantiationExtension&gt;<br />
+    &lt;/pbcoreInstantiation&gt;<br />
+  </code>
+</pre>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left" style="margin-top:1%;">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="http://localhost:4000">Home</a>
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/faqs.html">FAQs</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/glossary.html">Glossary</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/credits.html">Credits</a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          <li>
+            <a href="http://localhost:4000/license.html">License Details</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+        <ul class="list-unstyled">
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/elements.html">Elements</a></li>
+            
+            <li><a href="http://localhost:4000/attributes.html">Attributes</a></li>
+            
+            <li><a href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a></li>
+            
+            <li><a href="http://localhost:4000/xsd.html">XML Schema</a></li>
+            
+            <li><a href="http://localhost:4000/data-model.html">Data Model Visualization</a></li>
+            
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a></li>
+            
+            <li><a href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a></li>
+            
+            <li><a href="http://localhost:4000/validator.html">PBCore XML Validator</a></li>
+            
+            <li><a href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a></li>
+            
+            <li><a href="http://localhost:4000/mappings.html">Mappings</a></li>
+            
+            <li><a href="http://localhost:4000/sample-records.html">Sample Records</a></li>
+            
+            <li><a href="http://localhost:4000/tutorials.html">Tutorials</a></li>
+            
+            <li><a href="http://localhost:4000/presentations.html">Presentations</a></li>
+            
+            
+          
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/pbcore-users.html">PBCore Users</a></li>
+            
+            <li><a href="http://localhost:4000/user-groups.html">User Groups</a></li>
+            
+            <li><a href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a></li>
+            
+            <li><a href="http://localhost:4000/news.html">News and Updates</a></li>
+            
+            <li><a href="http://localhost:4000/contact.html">Contact Us</a></li>
+            
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <div class="row">
+      <div class="col-md-6" style="top: -1.2em;">
+        <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
+        <div class="footer-copyright">PBCore</div>
+        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
+      </div>
+
+      <div class="col-md-6 footer-msg">
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,920 @@
+<!doctype html>
+<html>
+  <head>
+    <head>
+  <meta charset="utf-8">
+  <title>Description Document With Instantiations</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+
+  <link href="/assets/css/a11y-dark.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/assets/highlight.pack.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
+
+      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
+        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+        if($(this).hasClass(start+'arrow-down')){
+          $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
+        }
+        else if($(this).hasClass(start+'arrow-up')){
+          $(this).removeClass(start+'arrow-up').addClass(start+'arrow-down')
+        }
+      })
+
+      $('#expand-all').click(function() {
+        console.log('hey dummy')
+        if($(this).hasClass('open')){
+          $('.collapse').collapse('hide');
+          $(this).removeClass('open').addClass('closed');
+        } else {
+          $('.collapse').collapse('show');
+          $(this).removeClass('closed').addClass('open');
+        }
+      });
+
+      var accordion_ids=Cookies.get('accordionDisplay');
+      if (accordion_ids!=null) {
+          //show the open_accordions visible group
+          $(accordion_ids).collapse("show");
+      }
+
+      $(document).on('shown.bs.collapse hidden.bs.collapse', function() {
+        var active_accs = $("div.elements.collapse.show[id^=collapse]")
+        var active_ids = $.map(active_accs, function(ele){
+          return '#' + ele.id;
+        }).join(',');
+
+        Cookies.set('accordionDisplay', active_ids)
+      });
+    });
+
+  </script>
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="PBCore Metadata Standard" />
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Description Document With Instantiations | PBCore Metadata Standard</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Description Document With Instantiations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt; &lt;pbcoreDescriptionDocument xmlns=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html https://raw.githubusercontent.com/WGBH/PBCore_2.1/master/pbcore-2.1.xsd&quot;&gt; &lt;pbcoreAssetDate dateType=&quot;released&quot;&gt;1977&lt;/pbcoreAssetDate&gt; &lt;pbcoreIdentifier source=&quot;Lucasfilm&quot;&gt;00001&lt;/pbcoreIdentifier&gt; &lt;pbcoreTitle titleType=&quot;Program&quot;&gt;Star Wars: A New Hope&lt;/pbcoreTitle&gt; &lt;pbcoreTitle titleType=&quot;Episode Number&quot;&gt;IV&lt;/pbcoreTitle&gt; &lt;pbcoreDescription&gt;The first film in the original Star Wars trilogy&lt;/pbcoreDescription&gt; &lt;pbcoreCreator&gt; &lt;creator source=&quot;&quot;&gt;Lucas, George&lt;/creator&gt; &lt;creatorRole&gt;Director&lt;/creatorRole&gt; &lt;/pbcoreCreator&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Hamill, Mark&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Luke Skywalker&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Fisher, Carrie&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Princess Leia Organa&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Ford, Harrison&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Han Solo&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Barcode&quot;&gt;123431&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;distributed&quot;&gt;1995&lt;/instantiationDate&gt; &lt;instantiationPhysical&gt;VHS&lt;/instantiationPhysical&gt; &lt;instantiationLocation&gt;Boston Public Library&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Filename&quot;&gt;sw_newhopedub.mp4&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;digitized&quot;&gt;2018&lt;/instantiationDate&gt; &lt;instantiationDigital&gt;video/mp4&lt;/instantiationDigital&gt; &lt;instantiationLocation&gt;/Volumes/Disk1/digitizedVHS/StarWars/sw_newhopedub.mp4&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreAnnotation&gt;The version where Han shoots first &lt;/pbcoreAnnotation&gt; &lt;/pbcoreDescriptionDocument&gt;" />
+<meta property="og:description" content="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt; &lt;pbcoreDescriptionDocument xmlns=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html https://raw.githubusercontent.com/WGBH/PBCore_2.1/master/pbcore-2.1.xsd&quot;&gt; &lt;pbcoreAssetDate dateType=&quot;released&quot;&gt;1977&lt;/pbcoreAssetDate&gt; &lt;pbcoreIdentifier source=&quot;Lucasfilm&quot;&gt;00001&lt;/pbcoreIdentifier&gt; &lt;pbcoreTitle titleType=&quot;Program&quot;&gt;Star Wars: A New Hope&lt;/pbcoreTitle&gt; &lt;pbcoreTitle titleType=&quot;Episode Number&quot;&gt;IV&lt;/pbcoreTitle&gt; &lt;pbcoreDescription&gt;The first film in the original Star Wars trilogy&lt;/pbcoreDescription&gt; &lt;pbcoreCreator&gt; &lt;creator source=&quot;&quot;&gt;Lucas, George&lt;/creator&gt; &lt;creatorRole&gt;Director&lt;/creatorRole&gt; &lt;/pbcoreCreator&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Hamill, Mark&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Luke Skywalker&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Fisher, Carrie&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Princess Leia Organa&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Ford, Harrison&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Han Solo&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Barcode&quot;&gt;123431&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;distributed&quot;&gt;1995&lt;/instantiationDate&gt; &lt;instantiationPhysical&gt;VHS&lt;/instantiationPhysical&gt; &lt;instantiationLocation&gt;Boston Public Library&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Filename&quot;&gt;sw_newhopedub.mp4&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;digitized&quot;&gt;2018&lt;/instantiationDate&gt; &lt;instantiationDigital&gt;video/mp4&lt;/instantiationDigital&gt; &lt;instantiationLocation&gt;/Volumes/Disk1/digitizedVHS/StarWars/sw_newhopedub.mp4&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreAnnotation&gt;The version where Han shoots first &lt;/pbcoreAnnotation&gt; &lt;/pbcoreDescriptionDocument&gt;" />
+<link rel="canonical" href="http://localhost:4000/sample-records/description-document-with-instantiations.html" />
+<meta property="og:url" content="http://localhost:4000/sample-records/description-document-with-instantiations.html" />
+<meta property="og:site_name" content="PBCore Metadata Standard" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/sample-records/description-document-with-instantiations.html","headline":"Description Document With Instantiations","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/sample-records/description-document-with-instantiations.html"},"description":"&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt; &lt;pbcoreDescriptionDocument xmlns=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.pbcore.org/PBCore/PBCoreNamespace.html https://raw.githubusercontent.com/WGBH/PBCore_2.1/master/pbcore-2.1.xsd&quot;&gt; &lt;pbcoreAssetDate dateType=&quot;released&quot;&gt;1977&lt;/pbcoreAssetDate&gt; &lt;pbcoreIdentifier source=&quot;Lucasfilm&quot;&gt;00001&lt;/pbcoreIdentifier&gt; &lt;pbcoreTitle titleType=&quot;Program&quot;&gt;Star Wars: A New Hope&lt;/pbcoreTitle&gt; &lt;pbcoreTitle titleType=&quot;Episode Number&quot;&gt;IV&lt;/pbcoreTitle&gt; &lt;pbcoreDescription&gt;The first film in the original Star Wars trilogy&lt;/pbcoreDescription&gt; &lt;pbcoreCreator&gt; &lt;creator source=&quot;&quot;&gt;Lucas, George&lt;/creator&gt; &lt;creatorRole&gt;Director&lt;/creatorRole&gt; &lt;/pbcoreCreator&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Hamill, Mark&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Luke Skywalker&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Fisher, Carrie&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Princess Leia Organa&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreContributor&gt; &lt;contributor&gt;Ford, Harrison&lt;/contributor&gt; &lt;contributorRole portrayal=&quot;Han Solo&quot;&gt;Actor&lt;/contributorRole&gt; &lt;/pbcoreContributor&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Barcode&quot;&gt;123431&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;distributed&quot;&gt;1995&lt;/instantiationDate&gt; &lt;instantiationPhysical&gt;VHS&lt;/instantiationPhysical&gt; &lt;instantiationLocation&gt;Boston Public Library&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreInstantiation&gt; &lt;instantiationIdentifier source=&quot;Filename&quot;&gt;sw_newhopedub.mp4&lt;/instantiationIdentifier&gt; &lt;instantiationDate dateType=&quot;digitized&quot;&gt;2018&lt;/instantiationDate&gt; &lt;instantiationDigital&gt;video/mp4&lt;/instantiationDigital&gt; &lt;instantiationLocation&gt;/Volumes/Disk1/digitizedVHS/StarWars/sw_newhopedub.mp4&lt;/instantiationLocation&gt; &lt;/pbcoreInstantiation&gt; &lt;pbcoreAnnotation&gt;The version where Han shoots first &lt;/pbcoreAnnotation&gt; &lt;/pbcoreDescriptionDocument&gt;","@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+        <header>
+  <nav class="primary_nav_container navbar navbar-expand-xl navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand-xs navbar-light bg-light" style="min-height:9em;height:9em;">
+
+    <div class="navbar-collapse" id="navbarNavDropdown">
+
+      <div style="margin-left:5.7%; margin-bottom:2.0%;overflow-y:visible; z-index: 10000;">
+          <a href="http://localhost:4000"><img src="/assets/images/pbcore-logo.png" alt=""></a>
+      </div>
+      <ul style="margin-left:6.1%; bottom: 0; position: absolute;" class="navbar-nav">
+
+        <li class="nav-item dropdown menu_about">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+
+          <div class="dropdown-menu menu_about" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/faqs.html">FAQs</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/glossary.html">Glossary</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/credits.html">Credits</a>
+                
+              
+            
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_schema">
+
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Schema
+          </a>
+
+          <div class="dropdown-menu menu_schema" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/elements.html">Elements</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/attributes.html">Attributes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/xsd.html">XML Schema</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/data-model.html">Data Model Visualization</a>
+                
+              
+            
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_resources">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu menu_resources" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/validator.html">PBCore XML Validator</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/mappings.html">Mappings</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/sample-records.html">Sample Records</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/tutorials.html">Tutorials</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/presentations.html">Presentations</a>
+                
+              
+            
+              
+            
+          </div>
+        </li>
+
+        <li class="nav-item dropdown menu_community">
+          <a class="nav-link" data-toggle="dropdown" role="button" href="#" aria-haspopup="true" aria-expanded="false">
+            Community
+          </a>
+          <div class="dropdown-menu menu_community" aria-labelledby="navbarDropdownMenuLink">
+            
+              
+            
+              
+            
+              
+            
+              
+                
+                  <a class="dropdown-item" href="http://localhost:4000/pbcore-users.html">PBCore Users</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/user-groups.html">User Groups</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/news.html">News and Updates</a>
+                
+                  <a class="dropdown-item" href="http://localhost:4000/contact.html">Contact Us</a>
+                
+              
+            
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</header>
+
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="margin-top:6em; margin-bottom:3.6em;">
+          <div class="row" style="margin-top:3.6em; margin-bottom:3.6em;">
+  <div class="col-md-6">
+
+    <h2 class="red title">
+      Sample Records
+    </h2>
+
+    <p class="med-text">
+      Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit.
+    </p>
+
+  </div>
+
+  <div class="col-md-6">
+    <button class="pb-button pb-button-who">TUTORIAL</button>
+  </div>
+</div>
+
+<div class="row" style="max-height: 70vh;">
+
+  <div class="col-md-3 text-center no-padding black-border" style="border-right: 0px;">
+
+    <div class="red-back white text-center" style="height: 2.4em; font-size: 19px;">
+      SAMPLE RECORDS
+    </div>
+
+    <div style="padding-top: 12%;">
+      <p class="sample-rec-wide ">
+  <a href="/sample-records/collection">Collection</a>
+</p>
+<p class="sample-rec-wide highlight">
+  <a href="/sample-records/description-document-with-instantiations">Description Document With Instantiations</a>
+</p>
+<p class="sample-rec-wide ">
+  <a href="/sample-records/description-document">Description Document</a>
+</p>
+<p class="sample-rec-wide ">
+  <a href="/sample-records/instantiation">Instantiation</a>
+</p>
+
+    </div>
+  </div>
+
+  <div class="col-md-3  black-border" style="border-right: 0px;">
+
+    <div class="row">
+      <div class="col-md-12 no-padding">
+
+        <div class="red-back white text-center" style="height: 2.4em; font-size: 19px;">
+          PLAIN TEXT FORMAT
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 no-padding" style=" overflow-y: hidden;">
+
+        <span style="margin-top:1em; display: block; padding: 6%; overflow-y: scroll; max-height: 50vh;">
+
+          
+
+            <span class="blue">
+              DESCRIPTION DOCUMENT:
+            </span> 
+
+            
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    ASSET DATE:
+                  </span> 1977
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="green">
+                          Date type:
+                        </span> Released
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    IDENTIFIER:
+                  </span> 1
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="green">
+                          Source:
+                        </span> Lucasfilm
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    TITLE:
+                  </span> Star Wars - A New Hope
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="green">
+                          Title type:
+                        </span> Program
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    TITLE:
+                  </span> IV
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="green">
+                          Title type:
+                        </span> Episode Number
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    DESCRIPTION:
+                  </span> The first film in the original Star Wars trilogy
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    CREATOR:
+                  </span> 
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CREATOR:
+                        </span> Lucas, George
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CREATOR ROLE:
+                        </span> Director
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    CONTRIBUTOR:
+                  </span> 
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR:
+                        </span> Hamill, Mark
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR ROLE:
+                        </span> Actor
+
+                        
+                        
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="green">
+                                Portrayal:
+                              </span> Luke Skywalker
+
+                            </span>
+                          
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    CONTRIBUTOR:
+                  </span> 
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR:
+                        </span> Fisher, Carrie
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR ROLE:
+                        </span> Actor
+
+                        
+                        
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="green">
+                                Portrayal:
+                              </span> Princess Leia Organa
+
+                            </span>
+                          
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+                <span class="indent-1 tree-item">
+
+                  <span class="blue">
+                    CONTRIBUTOR:
+                  </span> 
+
+                  
+
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR:
+                        </span> Ford, Harrison
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          CONTRIBUTOR ROLE:
+                        </span> Actor
+
+                        
+                        
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="green">
+                                Portrayal:
+                              </span> Han Solo
+
+                            </span>
+                          
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          INSTANTIATION:
+                        </span> 
+
+                        
+                        
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION IDENTIFIER:
+                              </span> 123431
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION DATE:
+                              </span> 1995
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION PHYSICAL:
+                              </span> VHS
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION LOCATION:
+                              </span> Boston Public Library
+
+                            </span>
+                          
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          INSTANTIATION:
+                        </span> 
+
+                        
+                        
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION IDENTIFIER:
+                              </span> sw_newhopedub.mp4
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION DATE:
+                              </span> 2018
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION DIGITAL:
+                              </span> video/mp4
+
+                            </span>
+                          
+                            <span class="indent-1 tree-item">
+
+                              <span class="blue">
+                                INSTANTIATION LOCATION:
+                              </span> /Volumes/Disk1/digitizedVHS/StarWars/sw_newhopedub.mp4
+
+                            </span>
+                          
+
+                        
+                      </span>
+                    
+                      <span class="indent-1 tree-item">
+
+                        <span class="blue">
+                          ANNOTATION:
+                        </span> The version where Han shoots first
+
+                        
+                      </span>
+                    
+
+                  
+                </span>
+              
+
+            
+
+          
+
+        </span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 no-padding black-border">
+
+    <div class="red-back white text-center" style="height: 2.4em; font-size: 19px;">
+      XML FORMAT
+    </div>
+
+    <div class="row" style="margin-left:0;margin-right:0;">
+      <div class="" style=" max-height: 50vh;padding-left: 0;padding-right: 0;overflow-y: scroll;">
+
+        <pre >
+          <code class="xml"style="overflow-y: auto;overflow-x: auto;">
+            <p>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;<br />
+&lt;pbcoreDescriptionDocument xmlns="http://www.pbcore.org/PBCore/PBCoreNamespace.html" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.pbcore.org/PBCore/PBCoreNamespace.html https://raw.githubusercontent.com/WGBH/PBCore_2.1/master/pbcore-2.1.xsd"&gt;<br />
+  &lt;pbcoreAssetDate dateType="released"&gt;1977&lt;/pbcoreAssetDate&gt;<br />
+  &lt;pbcoreIdentifier source="Lucasfilm"&gt;00001&lt;/pbcoreIdentifier&gt;<br />
+  &lt;pbcoreTitle titleType="Program"&gt;Star Wars: A New Hope&lt;/pbcoreTitle&gt;<br />
+  &lt;pbcoreTitle titleType="Episode Number"&gt;IV&lt;/pbcoreTitle&gt;<br />
+  &lt;pbcoreDescription&gt;The first film in the original Star Wars trilogy&lt;/pbcoreDescription&gt;<br />
+  &lt;pbcoreCreator&gt;<br />
+    &lt;creator source=""&gt;Lucas, George&lt;/creator&gt;<br />
+    &lt;creatorRole&gt;Director&lt;/creatorRole&gt;<br />
+  &lt;/pbcoreCreator&gt;<br />
+  &lt;pbcoreContributor&gt;<br />
+    &lt;contributor&gt;Hamill, Mark&lt;/contributor&gt;<br />
+    &lt;contributorRole portrayal="Luke Skywalker"&gt;Actor&lt;/contributorRole&gt;<br />
+  &lt;/pbcoreContributor&gt;<br />
+  &lt;pbcoreContributor&gt;<br />
+    &lt;contributor&gt;Fisher, Carrie&lt;/contributor&gt;<br />
+    &lt;contributorRole portrayal="Princess Leia Organa"&gt;Actor&lt;/contributorRole&gt;<br />
+  &lt;/pbcoreContributor&gt;<br />
+  &lt;pbcoreContributor&gt;<br />
+    &lt;contributor&gt;Ford, Harrison&lt;/contributor&gt;<br />
+    &lt;contributorRole portrayal="Han Solo"&gt;Actor&lt;/contributorRole&gt;<br />
+  &lt;/pbcoreContributor&gt;<br />
+  &lt;pbcoreInstantiation&gt;<br />
+    &lt;instantiationIdentifier source="Barcode"&gt;123431&lt;/instantiationIdentifier&gt;<br />
+    &lt;instantiationDate dateType="distributed"&gt;1995&lt;/instantiationDate&gt;<br />
+    &lt;instantiationPhysical&gt;VHS&lt;/instantiationPhysical&gt;<br />
+    &lt;instantiationLocation&gt;Boston Public Library&lt;/instantiationLocation&gt;<br />
+  &lt;/pbcoreInstantiation&gt;<br />
+  &lt;pbcoreInstantiation&gt;<br />
+    &lt;instantiationIdentifier source="Filename"&gt;sw_newhopedub.mp4&lt;/instantiationIdentifier&gt;<br />
+    &lt;instantiationDate dateType="digitized"&gt;2018&lt;/instantiationDate&gt;<br />
+    &lt;instantiationDigital&gt;video/mp4&lt;/instantiationDigital&gt;<br />
+    &lt;instantiationLocation&gt;/Volumes/Disk1/digitizedVHS/StarWars/sw_newhopedub.mp4&lt;/instantiationLocation&gt;<br />
+  &lt;/pbcoreInstantiation&gt;<br />
+  &lt;pbcoreAnnotation&gt;The version where Han shoots first &lt;/pbcoreAnnotation&gt;<br />
+&lt;/pbcoreDescriptionDocument&gt;<br /></p>
+
+          </code>
+        </pre>
+        <!-- use xml formatter to get indentation, change line breaks to brs, escape html entities, turn &ltbr&gt back into <br> -->
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-12 med-text red" style="margin-top: 4%;">
+
+    Download complete user documentation
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left" style="margin-top:1%;">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="http://localhost:4000">Home</a>
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://localhost:4000/what-is-pbcore.html">What is PBCore?</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/faqs.html">FAQs</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/glossary.html">Glossary</a>
+                </li>
+              
+                <li>
+                  <a href="http://localhost:4000/credits.html">Credits</a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          <li>
+            <a href="http://localhost:4000/license.html">License Details</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+        <ul class="list-unstyled">
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/elements.html">Elements</a></li>
+            
+            <li><a href="http://localhost:4000/attributes.html">Attributes</a></li>
+            
+            <li><a href="http://localhost:4000/pbcore-controlled-vocabularies.html">Controlled Vocabularies</a></li>
+            
+            <li><a href="http://localhost:4000/xsd.html">XML Schema</a></li>
+            
+            <li><a href="http://localhost:4000/data-model.html">Data Model Visualization</a></li>
+            
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
+
+      <!-- Grid column -->
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/cataloging-tool.html">Cataloging Tool</a></li>
+            
+            <li><a href="http://localhost:4000/spreadsheet-templates.html">Spreadsheet Templates</a></li>
+            
+            <li><a href="http://localhost:4000/validator.html">PBCore XML Validator</a></li>
+            
+            <li><a href="http://localhost:4000/external-tools-and-integrations.html">External Tools/Integrations</a></li>
+            
+            <li><a href="http://localhost:4000/mappings.html">Mappings</a></li>
+            
+            <li><a href="http://localhost:4000/sample-records.html">Sample Records</a></li>
+            
+            <li><a href="http://localhost:4000/tutorials.html">Tutorials</a></li>
+            
+            <li><a href="http://localhost:4000/presentations.html">Presentations</a></li>
+            
+            
+          
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <div class="col-md-3 ">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          
+            
+          
+            
+          
+            
+          
+            
+            
+            <li><a href="http://localhost:4000/pbcore-users.html">PBCore Users</a></li>
+            
+            <li><a href="http://localhost:4000/user-groups.html">User Groups</a></li>
+            
+            <li><a href="http://localhost:4000/annual-meeting-notes.html">Annual Meeting Notes</a></li>
+            
+            <li><a href="http://localhost:4000/news.html">News and Updates</a></li>
+            
+            <li><a href="http://localhost:4000/contact.html">Contact Us</a></li>
+            
+            
+          
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    <div class="row">
+      <div class="col-md-6" style="top: -1.2em;">
+        <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
+        <div class="footer-copyright">PBCore</div>
+        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
+      </div>
+
+      <div class="col-md-6 footer-msg">
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+
+  <!-- Copyright -->
+</footer>
+
+      </div>
+    </div>
+  </body>
+</html>
