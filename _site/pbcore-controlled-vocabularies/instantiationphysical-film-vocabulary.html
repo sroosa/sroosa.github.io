@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html","headline":"Instantiationphysical Film Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html","headline":"Instantiationphysical Film Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-film-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,67 +319,65 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Film:</div>
-            <div class="attribute-note">A general term for unknown moving image celluloid formats. If more specific format information is known, please use the appropriate term from the list.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">8mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 8mm in width.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">9.5mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 9.5mm in width.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Super 8mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 8mm in width, with an expanded picture area.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">16mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 16mm in width.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Super 16mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 16mm in width, with an expanded picture area.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">22mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 22mm in width.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">28mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 28mm in width.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">35mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 35mm in width. Some 35mm films may be printed on paper.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">70mm film:</div>
-            <div class="attribute-note">A gauge of moving image printed on celluloid, 70mm in width.</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="Film" class="bolder vocab-term">Film:</div>
+          <div class="attribute-note">A general term for unknown moving image celluloid formats. If more specific format information is known, please use the appropriate term from the list.</div>
+        </li>
+      
+        <li>
+          <div id="8mmFilm" class="bolder vocab-term">8mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 8mm in width.</div>
+        </li>
+      
+        <li>
+          <div id="9andaHalfmmFilm" class="bolder vocab-term">9.5mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 9.5mm in width.</div>
+        </li>
+      
+        <li>
+          <div id="Super8mmFilm" class="bolder vocab-term">Super 8mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 8mm in width, with an expanded picture area.</div>
+        </li>
+      
+        <li>
+          <div id="16mmFilm" class="bolder vocab-term">16mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 16mm in width.</div>
+        </li>
+      
+        <li>
+          <div id="Super16mmFilm" class="bolder vocab-term">Super 16mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 16mm in width, with an expanded picture area.</div>
+        </li>
+      
+        <li>
+          <div id="22mmFilm" class="bolder vocab-term">22mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 22mm in width.</div>
+        </li>
+      
+        <li>
+          <div id="28mmFilm" class="bolder vocab-term">28mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 28mm in width.</div>
+        </li>
+      
+        <li>
+          <div id="35mmFilm" class="bolder vocab-term">35mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 35mm in width. Some 35mm films may be printed on paper.</div>
+        </li>
+      
+        <li>
+          <div id="70mmFilm" class="bolder vocab-term">70mm film:</div>
+          <div class="attribute-note">A gauge of moving image printed on celluloid, 70mm in width.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/vocabulary_id/463.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -537,12 +541,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

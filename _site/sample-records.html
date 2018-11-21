@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -233,13 +239,13 @@
     </h2>
 
     <p class="med-text">
-      Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit.
+
     </p>
 
   </div>
 
   <div class="col-md-6">
-    <button class="pb-button pb-button-who">TUTORIAL</button>
+    <button style="margin:20%;" class="pb-button pb-button-who">TUTORIAL</button>
   </div>
 </div>
 
@@ -264,13 +270,6 @@
   <a href="/sample-records/instantiation">Instantiation</a>
 </p>
 
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 med-text red" style="margin-top: 4%;">
-
-    Download complete user documentation
   </div>
 </div>
 
@@ -434,12 +433,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

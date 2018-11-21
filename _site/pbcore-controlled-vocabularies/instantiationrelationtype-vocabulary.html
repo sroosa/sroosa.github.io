@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html","headline":"Instantiationrelationtype Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html","headline":"Instantiationrelationtype Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationrelationtype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,67 +319,65 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Is Clone Of:</div>
-            <div class="attribute-note">The instantiation being described was digitally or losslessly copied from another instantiation, which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Cloned To:</div>
-            <div class="attribute-note">The instantiation being described has been digitally or losslessly copied to another instantiation, which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Dub Of:</div>
-            <div class="attribute-note">The instantiation being described was physically duplicated from another instantiation, which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Dubbed To:</div>
-            <div class="attribute-note">The instantiation being described has been physically duplicated onto another instantiation, which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Format Of:</div>
-            <div class="attribute-note">The instantiation being described is an alternate format of an original instantiation (for example, a digital file which was created from an analog video) which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Has Format:</div>
-            <div class="attribute-note">The instantiation being described exists in an alternate format (for example, an analog video which also exists as a digital file) which is being pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Part Of:</div>
-            <div class="attribute-note">The instantiation being described is part of the asset or instantiation being pointed to in this relation element (for example, a clip that has been taken from a longer piece.)</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Has Part:</div>
-            <div class="attribute-note">A portion of the instatiation being described exists as an independent instantiation (for example, a clip) which is pointed to in this relation element.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Replaces:</div>
-            <div class="attribute-note">The instantiation being described is a substitution for the instantiation being pointed to in the relation element (for example, because the original instantiation has been deaccessioned.)</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Relplaced By:</div>
-            <div class="attribute-note">The instantiation being described is being substituted for by the instantiation being pointed to in the relation element (for example, because it has been deaccessioned.)</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="IsCloneOf" class="bolder vocab-term">Is Clone Of:</div>
+          <div class="attribute-note">The instantiation being described was digitally or losslessly copied from another instantiation, which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="ClonedTo" class="bolder vocab-term">Cloned To:</div>
+          <div class="attribute-note">The instantiation being described has been digitally or losslessly copied to another instantiation, which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="IsDubOf" class="bolder vocab-term">Is Dub Of:</div>
+          <div class="attribute-note">The instantiation being described was physically duplicated from another instantiation, which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="DubbedTo" class="bolder vocab-term">Dubbed To:</div>
+          <div class="attribute-note">The instantiation being described has been physically duplicated onto another instantiation, which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="IsFormatOf" class="bolder vocab-term">Is Format Of:</div>
+          <div class="attribute-note">The instantiation being described is an alternate format of an original instantiation (for example, a digital file which was created from an analog video) which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="HasFormat" class="bolder vocab-term">Has Format:</div>
+          <div class="attribute-note">The instantiation being described exists in an alternate format (for example, an analog video which also exists as a digital file) which is being pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="IsPartOf" class="bolder vocab-term">Is Part Of:</div>
+          <div class="attribute-note">The instantiation being described is part of the asset or instantiation being pointed to in this relation element (for example, a clip that has been taken from a longer piece.)</div>
+        </li>
+      
+        <li>
+          <div id="HasPart" class="bolder vocab-term">Has Part:</div>
+          <div class="attribute-note">A portion of the instatiation being described exists as an independent instantiation (for example, a clip) which is pointed to in this relation element.</div>
+        </li>
+      
+        <li>
+          <div id="Replaces" class="bolder vocab-term">Replaces:</div>
+          <div class="attribute-note">The instantiation being described is a substitution for the instantiation being pointed to in the relation element (for example, because the original instantiation has been deaccessioned.)</div>
+        </li>
+      
+        <li>
+          <div id="IsReplacedBy" class="bolder vocab-term">Is Replaced By:</div>
+          <div class="attribute-note">The instantiation being described is being substituted for by the instantiation being pointed to in the relation element (for example, because it has been deaccessioned.)</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/vocabulary_id/459.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -537,12 +541,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

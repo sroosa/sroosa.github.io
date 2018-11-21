@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/elements/extensionembedded.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/elements/extensionembedded.html","headline":"Extensionembedded","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/elements/extensionembedded.html"},"description":"&lt;extensionEmbedded&gt; &lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:smil=&quot;http://www.w3.org/2001/SMIL20/Language&quot;&gt; &lt;teiHeader&gt; &lt;fileDesc&gt; &lt;sourceDesc&gt; &lt;recordingStmt&gt; &lt;recording type=&quot;video&quot;&gt; &lt;p&gt;INTERVIEW WITH JOHN DOE&lt;/p&gt; &lt;/recording&gt; &lt;/recordingStmt&gt; &lt;/sourceDesc&gt; &lt;/fileDesc&gt; &lt;/teiHeader&gt; &lt;text&gt; &lt;body&gt; &lt;listPerson&gt; &lt;person xml:id=&quot;q&quot;&gt; &lt;persName xml:lang=&quot;en&quot;&gt;Interviewer&lt;/persName&gt; &lt;/person&gt; &lt;/listPerson&gt; &lt;listPerson&gt; &lt;person xml:id=&quot;a&quot;&gt; &lt;persName xml:lang=&quot;en&quot;&gt;Doe, John&lt;/persName&gt; &lt;/person&gt; &lt;/listPerson&gt; &lt;div type=&quot;tape&quot; xml:id=&quot;barcode254870&quot;&gt; &lt;incident&gt;&lt;desc&gt;Part 1&lt;/desc&gt;&lt;/incident&gt; &lt;div type=&quot;qa&quot; xml:id=&quot;q0&quot;&gt; &lt;u who=&quot;#q&quot;&gt; &lt;seg xml:id=&quot;para2&quot; smil:begin=&quot;00:00:23.685&quot; smil:end=&quot;00:00:42.25&quot;&gt;What were the conditions like when you travelled to El Salvador in 1991?&lt;/seg&gt; &lt;/u&gt; &lt;u who=&quot;#a&quot;&gt; &lt;seg xml:id=&quot;para3&quot; smil:begin=&quot;00:00:42.25&quot; smil:end=&quot;00:02:46.138&quot;&gt;I travelled to El Salvador in 1991 by way of Nicaragua. I saw many different conditions depending on the locale...&lt;/seg&gt; &lt;/div&gt; &lt;/body&gt; &lt;/text&gt; &lt;/TEI&gt; &lt;/extensionEmbedded&gt;","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/elements/extensionembedded.html","headline":"Extensionembedded","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/elements/extensionembedded.html"},"description":"&lt;extensionEmbedded&gt; &lt;TEI xmlns=&quot;http://www.tei-c.org/ns/1.0&quot; xmlns:xhtml=&quot;http://www.w3.org/1999/xhtml&quot; xmlns:smil=&quot;http://www.w3.org/2001/SMIL20/Language&quot;&gt; &lt;teiHeader&gt; &lt;fileDesc&gt; &lt;sourceDesc&gt; &lt;recordingStmt&gt; &lt;recording type=&quot;video&quot;&gt; &lt;p&gt;INTERVIEW WITH JOHN DOE&lt;/p&gt; &lt;/recording&gt; &lt;/recordingStmt&gt; &lt;/sourceDesc&gt; &lt;/fileDesc&gt; &lt;/teiHeader&gt; &lt;text&gt; &lt;body&gt; &lt;listPerson&gt; &lt;person xml:id=&quot;q&quot;&gt; &lt;persName xml:lang=&quot;en&quot;&gt;Interviewer&lt;/persName&gt; &lt;/person&gt; &lt;/listPerson&gt; &lt;listPerson&gt; &lt;person xml:id=&quot;a&quot;&gt; &lt;persName xml:lang=&quot;en&quot;&gt;Doe, John&lt;/persName&gt; &lt;/person&gt; &lt;/listPerson&gt; &lt;div type=&quot;tape&quot; xml:id=&quot;barcode254870&quot;&gt; &lt;incident&gt;&lt;desc&gt;Part 1&lt;/desc&gt;&lt;/incident&gt; &lt;div type=&quot;qa&quot; xml:id=&quot;q0&quot;&gt; &lt;u who=&quot;#q&quot;&gt; &lt;seg xml:id=&quot;para2&quot; smil:begin=&quot;00:00:23.685&quot; smil:end=&quot;00:00:42.25&quot;&gt;What were the conditions like when you travelled to El Salvador in 1991?&lt;/seg&gt; &lt;/u&gt; &lt;u who=&quot;#a&quot;&gt; &lt;seg xml:id=&quot;para3&quot; smil:begin=&quot;00:00:42.25&quot; smil:end=&quot;00:02:46.138&quot;&gt;I travelled to El Salvador in 1991 by way of Nicaragua. I saw many different conditions depending on the locale...&lt;/seg&gt; &lt;/div&gt; &lt;/body&gt; &lt;/text&gt; &lt;/TEI&gt; &lt;/extensionEmbedded&gt;","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -1500,12 +1506,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

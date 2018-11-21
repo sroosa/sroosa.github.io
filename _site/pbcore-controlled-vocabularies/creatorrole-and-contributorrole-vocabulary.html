@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html","headline":"Creatorrole And Contributorrole Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html","headline":"Creatorrole And Contributorrole Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/creatorrole-and-contributorrole-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,282 +319,280 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Actor:</div>
-            <div class="attribute-note">Person playing a character role in the production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Artist:</div>
-            <div class="attribute-note">Person primarily responsible for the artistic content of the production, or the visual content contained in the media work, and who may hold copyright to it – for example, a video artist like Andy Warhol, or a painter commissioned to provide a visual work for the production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Artist Director:</div>
-            <div class="attribute-note">Person responsible for unifying the feel and vision of a television production, film production, theatrical company, etc.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Associate Producer:</div>
-            <div class="attribute-note">Person who takes on responsibilities delegated to them by the Producer. They work on the development and pre-production stages, and on the production. Duties can range from supervising the production design team or post production, or co-ordinating the work of visual effects companies. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Author:</div>
-            <div class="attribute-note">Person primarily responsible for the intellectual content of the production and who may hold copyright to it – for example, a novelist whose work is adapted into a film.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Broadcast Engineer:</div>
-            <div class="attribute-note">Person who works with hardware and broadcast systems that are used across television, radio and new media to broadcast and distribute programs.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Camera Operator:</div>
-            <div class="attribute-note">Person responsible for manning the camera. Several people may fill this role on one production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Caption Writer:</div>
-            <div class="attribute-note">Person or organization responsible for editing/adding closed captioning.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Casting Director:</div>
-            <div class="attribute-note">Person responsible for initially finding the cast members chosen for a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Choreographer:</div>
-            <div class="attribute-note">Person responsible for selection or creation of dance compositions and plans and arranges dance movements and patterns for dances and especially for ballets.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Cinematographer:</div>
-            <div class="attribute-note">See Director of Photography, the recommended term for this position.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Co-Producer:</div>
-            <div class="attribute-note">Person who performs a substantial portion of a creative producing function, or who is primarily responsible for one or more managerial producing functions. A co-producer has less responsibility than a producer for the completion of a project. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Commentator:</div>
-            <div class="attribute-note">Person who discusses news, sports events, weather, or the like, as on television or radio.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Composer:</div>
-            <div class="attribute-note">Person who writes music for a specific production, or who is responsible for the artistic content of a piece of music used within a specific production and who may own copyright to that content. Composers of specific elements (for example, theme music) may be identified in an annotation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Concept Artist:</div>
-            <div class="attribute-note">Person who produces an artistic rendering of an element or elements in a film, TV show, or video game, created as part of the development and visualization of characters, costumes, environments, etc.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Conductor:</div>
-            <div class="attribute-note">Person who directs the performance of an orchestra or choir.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Costume Designer:</div>
-            <div class="attribute-note">Person responsible for designing and creating costumes and wardrobe for a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Describer:</div>
-            <div class="attribute-note">Person or organization responsible for describing key visual elements in a production for visually-impaired viewers.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Director:</div>
-            <div class="attribute-note">Person who supervises the actors, camera crew, and other staff for a movie, play, television program, or similar production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Director of Photography:</div>
-            <div class="attribute-note">Cinematographer or director of photography (sometimes shortened to DP or DOP) is the chief over the camera crews working on a film, television production or other live action piece and is responsible for achieving artistic and technical decisions related to the image.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Editor:</div>
-            <div class="attribute-note">Person who assembles the footage for a production into the final end product.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Executive Producer:</div>
-            <div class="attribute-note">Person who secures funding for a production and oversees financial and organizational aspects of the production’s development.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Filmmaker:</div>
-            <div class="attribute-note">The person most prominently responsible for the making of a film, especially if they are involved in all phases of production – for example, an independent or experimental filmmaker.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Foley Artist:</div>
-            <div class="attribute-note">Person that uses objects to create (or recreate) sound on a foley sound stage to be added to the final audio mix, such as footsteps, the opening and closing doors, or mechanical sounds.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Graphic Designer:</div>
-            <div class="attribute-note">Person who creates and designs visual elements for a production, such as logos, posters or brochures.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Graphic Editor:</div>
-            <div class="attribute-note">Person who assembles graphics and animation for a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Guest:</div>
-            <div class="attribute-note">Person who is invited to appear on one or several episodes of a television show, but is not a regular part of the cast or crew.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Host:</div>
-            <div class="attribute-note">Person who introduces a television or radio program, presents the various program elements, and interviews any guests.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Interviewee:</div>
-            <div class="attribute-note">Person being interviewed.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Interviewee:</div>
-            <div class="attribute-note">Person who asks the questions during an interview.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Lighting Technician:</div>
-            <div class="attribute-note">Person responsible for the creation of the lighting design for a given production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Make-Up Artist:</div>
-            <div class="attribute-note">Person responsible for designing and creating make-up and prosthetic effects for a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Moderator:</div>
-            <div class="attribute-note">Person who moderates a discussion.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Music Supervisor:</div>
-            <div class="attribute-note">Person responsible for working with the director and composer of a production to manage, select, and/or edit music for the production; this may also be identified as music director or music editor.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Musician:</div>
-            <div class="attribute-note">Player of a musical instrument.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Narrator:</div>
-            <div class="attribute-note">Person whose voice explains what is happening in a television program or movie, but who generally is not seen.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Panelist:</div>
-            <div class="attribute-note">Member of a small group of persons gathered for formal public discussion, judging, or playing a radio or television game.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Performer:</div>
-            <div class="attribute-note">Broader term for Actor, Musician, Vocalist or Comedian. A ​person who ​entertains ​people by ​acting, ​singing, ​dancing, ​playing ​music, or providing some other form of entertainment.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Performing Group:</div>
-            <div class="attribute-note">Company, band, or group of performers who work together to ​entertain ​people by ​dancing, ​singing, ​acting, ​playing ​music, or providing some other form of entertainment.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Photographer:</div>
-            <div class="attribute-note">Person who ​takes ​photographs. In film and television this person may be called a unit still photographer or simply, still photographer, who creates still photographic images intended for use in promotion, continuity and documentation of films and television productions.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Producer:</div>
-            <div class="attribute-note">Person who initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative. A Producer is involved throughout all phases of production from inception to completion. A production may have more than one producer.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Production Unit:</div>
-            <div class="attribute-note">Corporate sub-entity or department that initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Recording Engineer:</div>
-            <div class="attribute-note">Person who operates consoles and other equipment to record, control, replay, and mix sound from various live performances and in the production of radio, television, music, and film. Recording Engineers may also be called Sound Recordists, Sound Mixers, or Audio Engineers. There are also specialized engineers such as Sound Engineers (for film sets), ADR Recordists, and Foley Recordists.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Reporter:</div>
-            <div class="attribute-note">Person who conducts interviews, reports events, or presents news information for a broadcast.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Sound Designer:</div>
-            <div class="attribute-note">Person who works closely with the production team to design any required sounds to include in a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Sound Editor:</div>
-            <div class="attribute-note">Person who creates the soundtrack by cutting and synchronizing all sound elements. There may be specialized editors for specific sound element types as well, such as a Sound Effects Editor.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Set Designer:</div>
-            <div class="attribute-note">Person who designs and creates the set for a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Speaker:</div>
-            <div class="attribute-note">Broad term for a person whose speech or lecture is included in a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Technical Director:</div>
-            <div class="attribute-note">Most senior technical person on a production team, who oversees the technical quality of the production and/or supervises the technical crew. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Video Engineer:</div>
-            <div class="attribute-note">Person who is responsible for technical aspects of video recording and production systems. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Vocalist:</div>
-            <div class="attribute-note">Person who sings or otherwise vocally contributes a production or a composition used in a production.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Voiceover Artist:</div>
-            <div class="attribute-note">Unseen performer who adds their voice to the production in various ways, such as for animated characters or when dubbing into another language. For musical performances use Vocalist.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Writer:</div>
-            <div class="attribute-note">Person who created or contributed to the script of a production; usually involved with the production as a work-for-hire.</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="Actor" class="bolder vocab-term">Actor:</div>
+          <div class="attribute-note">Person playing a character role in the production.</div>
+        </li>
+      
+        <li>
+          <div id="Artist" class="bolder vocab-term">Artist:</div>
+          <div class="attribute-note">Person primarily responsible for the artistic content of the production, or the visual content contained in the media work, and who may hold copyright to it – for example, a video artist like Andy Warhol, or a painter commissioned to provide a visual work for the production.</div>
+        </li>
+      
+        <li>
+          <div id="ArtisticDirector" class="bolder vocab-term">Artistic Director:</div>
+          <div class="attribute-note">Person responsible for unifying the feel and vision of a television production, film production, theatrical company, etc.</div>
+        </li>
+      
+        <li>
+          <div id="AssociateProducer" class="bolder vocab-term">Associate Producer:</div>
+          <div class="attribute-note">Person who takes on responsibilities delegated to them by the Producer. They work on the development and pre-production stages, and on the production. Duties can range from supervising the production design team or post production, or co-ordinating the work of visual effects companies. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+        </li>
+      
+        <li>
+          <div id="Author" class="bolder vocab-term">Author:</div>
+          <div class="attribute-note">Person primarily responsible for the intellectual content of the production and who may hold copyright to it – for example, a novelist whose work is adapted into a film.</div>
+        </li>
+      
+        <li>
+          <div id="BroadcastEngineer" class="bolder vocab-term">Broadcast Engineer:</div>
+          <div class="attribute-note">Person who works with hardware and broadcast systems that are used across television, radio and new media to broadcast and distribute programs.</div>
+        </li>
+      
+        <li>
+          <div id="CameraOperator" class="bolder vocab-term">Camera Operator:</div>
+          <div class="attribute-note">Person responsible for manning the camera. Several people may fill this role on one production.</div>
+        </li>
+      
+        <li>
+          <div id="CaptionWriter" class="bolder vocab-term">Caption Writer:</div>
+          <div class="attribute-note">Person or organization responsible for editing/adding closed captioning.</div>
+        </li>
+      
+        <li>
+          <div id="CastingDirector" class="bolder vocab-term">Casting Director:</div>
+          <div class="attribute-note">Person responsible for initially finding the cast members chosen for a production.</div>
+        </li>
+      
+        <li>
+          <div id="Choreographer" class="bolder vocab-term">Choreographer:</div>
+          <div class="attribute-note">Person responsible for selection or creation of dance compositions and plans and arranges dance movements and patterns for dances and especially for ballets.</div>
+        </li>
+      
+        <li>
+          <div id="Cinematographer" class="bolder vocab-term">Cinematographer:</div>
+          <div class="attribute-note">See Director of Photography, the recommended term for this position.</div>
+        </li>
+      
+        <li>
+          <div id="CoProducer" class="bolder vocab-term">Co-Producer:</div>
+          <div class="attribute-note">Person who performs a substantial portion of a creative producing function, or who is primarily responsible for one or more managerial producing functions. A co-producer has less responsibility than a producer for the completion of a project. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+        </li>
+      
+        <li>
+          <div id="Commentator" class="bolder vocab-term">Commentator:</div>
+          <div class="attribute-note">Person who discusses news, sports events, weather, or the like, as on television or radio.</div>
+        </li>
+      
+        <li>
+          <div id="Composer" class="bolder vocab-term">Composer:</div>
+          <div class="attribute-note">Person who writes music for a specific production, or who is responsible for the artistic content of a piece of music used within a specific production and who may own copyright to that content. Composers of specific elements (for example, theme music) may be identified in an annotation.</div>
+        </li>
+      
+        <li>
+          <div id="ConceptArtist" class="bolder vocab-term">Concept Artist:</div>
+          <div class="attribute-note">Person who produces an artistic rendering of an element or elements in a film, TV show, or video game, created as part of the development and visualization of characters, costumes, environments, etc.</div>
+        </li>
+      
+        <li>
+          <div id="Conductor" class="bolder vocab-term">Conductor:</div>
+          <div class="attribute-note">Person who directs the performance of an orchestra or choir.</div>
+        </li>
+      
+        <li>
+          <div id="CostumeDesigner" class="bolder vocab-term">Costume Designer:</div>
+          <div class="attribute-note">Person responsible for designing and creating costumes and wardrobe for a production.</div>
+        </li>
+      
+        <li>
+          <div id="Describer" class="bolder vocab-term">Describer:</div>
+          <div class="attribute-note">Person or organization responsible for describing key visual elements in a production for visually-impaired viewers.</div>
+        </li>
+      
+        <li>
+          <div id="Director" class="bolder vocab-term">Director:</div>
+          <div class="attribute-note">Person who supervises the actors, camera crew, and other staff for a movie, play, television program, or similar production.</div>
+        </li>
+      
+        <li>
+          <div id="DirectorofPhotography" class="bolder vocab-term">Director of Photography:</div>
+          <div class="attribute-note">Cinematographer or director of photography (sometimes shortened to DP or DOP) is the chief over the camera crews working on a film, television production or other live action piece and is responsible for achieving artistic and technical decisions related to the image.</div>
+        </li>
+      
+        <li>
+          <div id="Editor" class="bolder vocab-term">Editor:</div>
+          <div class="attribute-note">Person who assembles the footage for a production into the final end product.</div>
+        </li>
+      
+        <li>
+          <div id="ExecutiveProducer" class="bolder vocab-term">Executive Producer:</div>
+          <div class="attribute-note">Person who secures funding for a production and oversees financial and organizational aspects of the production’s development.</div>
+        </li>
+      
+        <li>
+          <div id="Filmmaker" class="bolder vocab-term">Filmmaker:</div>
+          <div class="attribute-note">The person most prominently responsible for the making of a film, especially if they are involved in all phases of production – for example, an independent or experimental filmmaker.</div>
+        </li>
+      
+        <li>
+          <div id="FoleyArtist" class="bolder vocab-term">Foley Artist:</div>
+          <div class="attribute-note">Person that uses objects to create (or recreate) sound on a foley sound stage to be added to the final audio mix, such as footsteps, the opening and closing doors, or mechanical sounds.</div>
+        </li>
+      
+        <li>
+          <div id="GraphicDesigner" class="bolder vocab-term">Graphic Designer:</div>
+          <div class="attribute-note">Person who creates and designs visual elements for a production, such as logos, posters or brochures.</div>
+        </li>
+      
+        <li>
+          <div id="GraphicEditor" class="bolder vocab-term">Graphic Editor:</div>
+          <div class="attribute-note">Person who assembles graphics and animation for a production.</div>
+        </li>
+      
+        <li>
+          <div id="Guest" class="bolder vocab-term">Guest:</div>
+          <div class="attribute-note">Person who is invited to appear on one or several episodes of a television show, but is not a regular part of the cast or crew.</div>
+        </li>
+      
+        <li>
+          <div id="Guest" class="bolder vocab-term">Host:</div>
+          <div class="attribute-note">Person who introduces a television or radio program, presents the various program elements, and interviews any guests.</div>
+        </li>
+      
+        <li>
+          <div id="Interviewee" class="bolder vocab-term">Interviewee:</div>
+          <div class="attribute-note">Person being interviewed.</div>
+        </li>
+      
+        <li>
+          <div id="Interviewer" class="bolder vocab-term">Interviewer:</div>
+          <div class="attribute-note">Person who asks the questions during an interview.</div>
+        </li>
+      
+        <li>
+          <div id="LightingTechnician" class="bolder vocab-term">Lighting Technician:</div>
+          <div class="attribute-note">Person responsible for the creation of the lighting design for a given production.</div>
+        </li>
+      
+        <li>
+          <div id="MakeUpArtist" class="bolder vocab-term">Make-Up Artist:</div>
+          <div class="attribute-note">Person responsible for designing and creating make-up and prosthetic effects for a production.</div>
+        </li>
+      
+        <li>
+          <div id="Moderator" class="bolder vocab-term">Moderator:</div>
+          <div class="attribute-note">Person who moderates a discussion.</div>
+        </li>
+      
+        <li>
+          <div id="MusicSupervisor" class="bolder vocab-term">Music Supervisor:</div>
+          <div class="attribute-note">Person responsible for working with the director and composer of a production to manage, select, and/or edit music for the production; this may also be identified as music director or music editor.</div>
+        </li>
+      
+        <li>
+          <div id="Musician" class="bolder vocab-term">Musician:</div>
+          <div class="attribute-note">Player of a musical instrument.</div>
+        </li>
+      
+        <li>
+          <div id="Narrator" class="bolder vocab-term">Narrator:</div>
+          <div class="attribute-note">Person whose voice explains what is happening in a television program or movie, but who generally is not seen.</div>
+        </li>
+      
+        <li>
+          <div id="Panelist" class="bolder vocab-term">Panelist:</div>
+          <div class="attribute-note">Member of a small group of persons gathered for formal public discussion, judging, or playing a radio or television game.</div>
+        </li>
+      
+        <li>
+          <div id="Performer" class="bolder vocab-term">Performer:</div>
+          <div class="attribute-note">Broader term for Actor, Musician, Vocalist or Comedian. A ​person who ​entertains ​people by ​acting, ​singing, ​dancing, ​playing ​music, or providing some other form of entertainment.</div>
+        </li>
+      
+        <li>
+          <div id="PerformingGroup" class="bolder vocab-term">Performing Group:</div>
+          <div class="attribute-note">Company, band, or group of performers who work together to ​entertain ​people by ​dancing, ​singing, ​acting, ​playing ​music, or providing some other form of entertainment.</div>
+        </li>
+      
+        <li>
+          <div id="Photographer" class="bolder vocab-term">Photographer:</div>
+          <div class="attribute-note">Person who ​takes ​photographs. In film and television this person may be called a unit still photographer or simply, still photographer, who creates still photographic images intended for use in promotion, continuity and documentation of films and television productions.</div>
+        </li>
+      
+        <li>
+          <div id="Producer" class="bolder vocab-term">Producer:</div>
+          <div class="attribute-note">Person who initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative. A Producer is involved throughout all phases of production from inception to completion. A production may have more than one producer.</div>
+        </li>
+      
+        <li>
+          <div id="ProductionUnit" class="bolder vocab-term">Production Unit:</div>
+          <div class="attribute-note">Corporate sub-entity or department that initiates, coordinates, supervises and controls all aspects of the production process, including creative, financial, technological and administrative.</div>
+        </li>
+      
+        <li>
+          <div id="RecordingEngineer" class="bolder vocab-term">Recording Engineer:</div>
+          <div class="attribute-note">Person who operates consoles and other equipment to record, control, replay, and mix sound from various live performances and in the production of radio, television, music, and film. Recording Engineers may also be called Sound Recordists, Sound Mixers, or Audio Engineers. There are also specialized engineers such as Sound Engineers (for film sets), ADR Recordists, and Foley Recordists.</div>
+        </li>
+      
+        <li>
+          <div id="Reporter" class="bolder vocab-term">Reporter:</div>
+          <div class="attribute-note">Person who conducts interviews, reports events, or presents news information for a broadcast.</div>
+        </li>
+      
+        <li>
+          <div id="SetDesigner" class="bolder vocab-term">Set Designer:</div>
+          <div class="attribute-note">Person who designs and creates the set for a production.</div>
+        </li>
+      
+        <li>
+          <div id="SoundDesigner" class="bolder vocab-term">Sound Designer:</div>
+          <div class="attribute-note">Person who works closely with the production team to design any required sounds to include in a production.</div>
+        </li>
+      
+        <li>
+          <div id="SoundEditor" class="bolder vocab-term">Sound Editor:</div>
+          <div class="attribute-note">Person who creates the soundtrack by cutting and synchronizing all sound elements. There may be specialized editors for specific sound element types as well, such as a Sound Effects Editor.</div>
+        </li>
+      
+        <li>
+          <div id="Speaker" class="bolder vocab-term">Speaker:</div>
+          <div class="attribute-note">Broad term for a person whose speech or lecture is included in a production.</div>
+        </li>
+      
+        <li>
+          <div id="TechnicalDirector" class="bolder vocab-term">Technical Director:</div>
+          <div class="attribute-note">Most senior technical person on a production team, who oversees the technical quality of the production and/or supervises the technical crew. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+        </li>
+      
+        <li>
+          <div id="VideoEngineer" class="bolder vocab-term">Video Engineer:</div>
+          <div class="attribute-note">Person who is responsible for technical aspects of video recording and production systems. This is an industry term, and specific roles and responsibilities may vary between jobs and productions.</div>
+        </li>
+      
+        <li>
+          <div id="Vocalist" class="bolder vocab-term">Vocalist:</div>
+          <div class="attribute-note">Person who sings or otherwise vocally contributes a production or a composition used in a production.</div>
+        </li>
+      
+        <li>
+          <div id="VoiceoverArtist" class="bolder vocab-term">Voiceover Artist:</div>
+          <div class="attribute-note">Unseen performer who adds their voice to the production in various ways, such as for animated characters or when dubbing into another language. For musical performances use Vocalist.</div>
+        </li>
+      
+        <li>
+          <div id="Writer" class="bolder vocab-term">Writer:</div>
+          <div class="attribute-note">Person who created or contributed to the script of a production; usually involved with the production as a work-for-hire.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/vocabulary_id/460.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -752,12 +756,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

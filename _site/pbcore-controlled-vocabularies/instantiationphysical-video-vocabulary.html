@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html","headline":"Instantiationphysical Video Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html","headline":"Instantiationphysical Video Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-video-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,235 +319,233 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Videocassette:</div>
-            <div class="attribute-note">A general term for unknown video cassette formats. If more specific format information is known, please use the appropriate term from the list below.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Open reel videotape:</div>
-            <div class="attribute-note">A general term for unknown open reel video formats. If more specific format information is known, please use the appropriate term from the list below.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Optical video disc:</div>
-            <div class="attribute-note">A general term for unknown optical video formats. If more specific format information is known, please use the appropriate term from the list below.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1 inch videotape:</div>
-            <div class="attribute-note">An open reel analog videotape format. If desired, format information can be included after a colon, for example: “1 inch videotape: MVC-10.” Types of 1 inch videotape include MVC-10, PI-3V, EV-200, EL-3400, IVC-700, IVC-800, IVC-900, UV-340, EV-210, BVH-1000, HDV-1000, HDD-1000, SMPTE Type A, SMPTE Type B, and SMPTE Type C.
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="Videocassette" class="bolder vocab-term">Videocassette:</div>
+          <div class="attribute-note">A general term for unknown video cassette formats. If more specific format information is known, please use the appropriate term from the list below.</div>
+        </li>
+      
+        <li>
+          <div id="OpenReelVideoTape" class="bolder vocab-term">Open reel videotape:</div>
+          <div class="attribute-note">A general term for unknown open reel video formats. If more specific format information is known, please use the appropriate term from the list below.</div>
+        </li>
+      
+        <li>
+          <div id="OpticalVideoDisc" class="bolder vocab-term">Optical video disc:</div>
+          <div class="attribute-note">A general term for unknown optical video formats. If more specific format information is known, please use the appropriate term from the list below.</div>
+        </li>
+      
+        <li>
+          <div id="1InchVideotape" class="bolder vocab-term">1 inch videotape:</div>
+          <div class="attribute-note">An open reel analog videotape format. If desired, format information can be included after a colon, for example: “1 inch videotape: MVC-10.” Types of 1 inch videotape include MVC-10, PI-3V, EV-200, EL-3400, IVC-700, IVC-800, IVC-900, UV-340, EV-210, BVH-1000, HDV-1000, HDD-1000, SMPTE Type A, SMPTE Type B, and SMPTE Type C.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1/2 inch videotape:</div>
-            <div class="attribute-note">An open reel analog videotape format. May also be known as helical scan tape. If desired, format information can be included after a colon, for example: “1/2 inch videotape: EIAJ Type 1.” Types of 1/2 inch video tape include: CV, EIAJ Type 1, Hawkeye, Recam, V200, and VCR.
+        </li>
+      
+        <li>
+          <div id="HalfInchVideotape" class="bolder vocab-term">1/2 inch videotape:</div>
+          <div class="attribute-note">An open reel analog videotape format. May also be known as helical scan tape. If desired, format information can be included after a colon, for example: “1/2 inch videotape: EIAJ Type 1.” Types of 1/2 inch video tape include: CV, EIAJ Type 1, Hawkeye, Recam, V200, and VCR.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1/4 inch videotape:</div>
-            <div class="attribute-note">An open reel analog videotape format. May also be known as Akai.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">2 inch videotape:</div>
-            <div class="attribute-note">An open reel analog videotape format. If desired, format information can be included after a colon, for example: “2 inch videotape: Quadruplex.” Types of 2 inch videotape include: Quadruplex, Octaplex, VR-1500, VR-1600, IVC-9000, Helical SV-201, and ACR 25.
+        </li>
+      
+        <li>
+          <div id="QuarterInchVideotape" class="bolder vocab-term">1/4 inch videotape:</div>
+          <div class="attribute-note">An open reel analog videotape format. May also be known as Akai.</div>
+        </li>
+      
+        <li>
+          <div id="2InchVideotape" class="bolder vocab-term">2 inch videotape:</div>
+          <div class="attribute-note">An open reel analog videotape format. If desired, format information can be included after a colon, for example: “2 inch videotape: Quadruplex.” Types of 2 inch videotape include: Quadruplex, Octaplex, VR-1500, VR-1600, IVC-9000, Helical SV-201, and ACR 25.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Betacam:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. Types of Betacam also include the higher-quality Betacam SP. This information can be included after a colon, as “Betacam: SP.”
+        </li>
+      
+        <li>
+          <div id="Betacam" class="bolder vocab-term">Betacam:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. Types of Betacam also include the higher-quality Betacam SP. This information can be included after a colon, as “Betacam: SP.”
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Betacam SX:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Betacam SX is a digital version of Betacam SP.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Betamax:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. May also be know as Beta. If desired, format information can be included after a colon, for example: “Betamax: ED.” Types of Betamax also include Beta Hi-Fi, ED Betamax and Super Betamax.
+        </li>
+      
+        <li>
+          <div id="BetacamSX" class="bolder vocab-term">Betacam SX:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Betacam SX is a digital version of Betacam SP.</div>
+        </li>
+      
+        <li>
+          <div id="Betamax" class="bolder vocab-term">Betamax:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. May also be know as Beta. If desired, format information can be included after a colon, for example: “Betamax: ED.” Types of Betamax also include Beta Hi-Fi, ED Betamax and Super Betamax.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Blu-ray disc:</div>
-            <div class="attribute-note">An optical disc-based digital video format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Catrivision:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D1:</div>
-            <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="BluRayDisc" class="bolder vocab-term">Blu-ray disc:</div>
+          <div class="attribute-note">An optical disc-based digital video format.</div>
+        </li>
+      
+        <li>
+          <div id="Cartrivision" class="bolder vocab-term">Catrivision:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="D1" class="bolder vocab-term">D1:</div>
+          <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D2:</div>
-            <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="D2" class="bolder vocab-term">D2:</div>
+          <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D3:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="D3" class="bolder vocab-term">D3:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D5:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of D5 also include D5 HD. This information can be included after a colon, as “D5: HD.” Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="D5" class="bolder vocab-term">D5:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of D5 also include D5 HD. This information can be included after a colon, as “D5: HD.” Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D6:</div>
-            <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="D6" class="bolder vocab-term">D6:</div>
+          <div class="attribute-note">A cassette-based 3/4-inch digital videotape format. Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">D9:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of D9 also include D9 HD. This information can be included after a colon, as “D9: HD.” Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
+        </li>
+      
+        <li>
+          <div id="D9" class="bolder vocab-term">D9:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of D9 also include D9 HD. This information can be included after a colon, as “D9: HD.” Different “D” formats are not necessarily backwards compatible: for example, a D-2 tape cannot be played on a D-1 machine.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DCT:</div>
-            <div class="attribute-note">A cassette-based 3/4-inch digital videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Digital Betacam:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. May also be known as DigiBeta or D-Beta. Digital Betacam is a digital version of Betacam SP.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Digital8:</div>
-            <div class="attribute-note">A cassette-based 8mm digital videotape format. Digital Betacam is a digital version of Hi8.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DV:</div>
-            <div class="attribute-note">A cassette-based 1/4-inch digital videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DVCAM:</div>
-            <div class="attribute-note">A cassette-based 1/4-inch digital videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DVCPRO:</div>
-            <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. If desired, format information can be included after a colon, for example: “DVCPro: 25.” Types of DVCPro include DVCPro 25, DVCPro 50, DVCPro Progressive, and DVCPro HD.
+        </li>
+      
+        <li>
+          <div id="DCT" class="bolder vocab-term">DCT:</div>
+          <div class="attribute-note">A cassette-based 3/4-inch digital videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="DigitalBetacam" class="bolder vocab-term">Digital Betacam:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. May also be known as DigiBeta or D-Beta. Digital Betacam is a digital version of Betacam SP.</div>
+        </li>
+      
+        <li>
+          <div id="Digital8" class="bolder vocab-term">Digital8:</div>
+          <div class="attribute-note">A cassette-based 8mm digital videotape format. Digital Betacam is a digital version of Hi8.</div>
+        </li>
+      
+        <li>
+          <div id="DV" class="bolder vocab-term">DV:</div>
+          <div class="attribute-note">A cassette-based 1/4-inch digital videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="DVCAM" class="bolder vocab-term">DVCAM:</div>
+          <div class="attribute-note">A cassette-based 1/4-inch digital videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="DVCPRO" class="bolder vocab-term">DVCPRO:</div>
+          <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. If desired, format information can be included after a colon, for example: “DVCPro: 25.” Types of DVCPro include DVCPro 25, DVCPro 50, DVCPro Progressive, and DVCPro HD.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DVD:</div>
-            <div class="attribute-note">A digital optical disc video format. If desired, format information can be included after a colon, for example: “DVD: DVD-R.” Types of DVD also include DVD+R, DVD+R DL, DVD-R, DVD-RW, and DVD+RW.
+        </li>
+      
+        <li>
+          <div id="DVD" class="bolder vocab-term">DVD:</div>
+          <div class="attribute-note">A digital optical disc video format. If desired, format information can be included after a colon, for example: “DVD: DVD-R.” Types of DVD also include DVD+R, DVD+R DL, DVD-R, DVD-RW, and DVD+RW.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">EIAJ:</div>
-            <div class="attribute-note">Cartridge A cartridge-based 1/2-inch analog videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">EVD:</div>
-            <div class="attribute-note">Videodisc A digital optical disc video format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">HDCAM:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of HDCAM also include HDCAM SR. This information can be included after a colon, as “HDCAM: SR.”
+        </li>
+      
+        <li>
+          <div id="EIAJ" class="bolder vocab-term">EIAJ:</div>
+          <div class="attribute-note">Cartridge A cartridge-based 1/2-inch analog videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="EVD" class="bolder vocab-term">EVD:</div>
+          <div class="attribute-note">Videodisc A digital optical disc video format.</div>
+        </li>
+      
+        <li>
+          <div id="HDCAM" class="bolder vocab-term">HDCAM:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch digital videotape format. Types of HDCAM also include HDCAM SR. This information can be included after a colon, as “HDCAM: SR.”
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">HDV:</div>
-            <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. This is a high-definition version of MiniDV.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Hi8:</div>
-            <div class="attribute-note">A cassette-based 8mm analog videotape format. Hi8 is a high-band version of Video8.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">LaserDisc:</div>
-            <div class="attribute-note">A digital optical disc video format. May also be known as DiscoVision. If desired, format information can be included after a colon, for example: “LaserDisc: CAV.” Types of LaserDisc include CAV, CLV, and CAA.
+        </li>
+      
+        <li>
+          <div id="HDV" class="bolder vocab-term">HDV:</div>
+          <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. This is a high-definition version of MiniDV.</div>
+        </li>
+      
+        <li>
+          <div id="Hi8" class="bolder vocab-term">Hi8:</div>
+          <div class="attribute-note">A cassette-based 8mm analog videotape format. Hi8 is a high-band version of Video8.</div>
+        </li>
+      
+        <li>
+          <div id="LaserDisc" class="bolder vocab-term">LaserDisc:</div>
+          <div class="attribute-note">A digital optical disc video format. May also be known as DiscoVision. If desired, format information can be included after a colon, for example: “LaserDisc: CAV.” Types of LaserDisc include CAV, CLV, and CAA.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">MII:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">MiniDV:</div>
-            <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. May also be known as DVC.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Super Video CD:</div>
-            <div class="attribute-note">A digital optical disc video format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">U-matic:</div>
-            <div class="attribute-note">A cassette-based 3/4-inch analog videotape format. May also be known as 3/4-inch tape. If desired, format information can be included after a colon, for example: “U-matic: S.” Types of U-matic include the smaller U-matic S and the high-quality U-matic SP.
+        </li>
+      
+        <li>
+          <div id="MII" class="bolder vocab-term">MII:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="MiniDV" class="bolder vocab-term">MiniDV:</div>
+          <div class="attribute-note">A cassette-based 1/4-inch digital videotape format. May also be known as DVC.</div>
+        </li>
+      
+        <li>
+          <div id="SuperVideoCD" class="bolder vocab-term">Super Video CD:</div>
+          <div class="attribute-note">A digital optical disc video format.</div>
+        </li>
+      
+        <li>
+          <div id="Umatic" class="bolder vocab-term">U-matic:</div>
+          <div class="attribute-note">A cassette-based 3/4-inch analog videotape format. May also be known as 3/4-inch tape. If desired, format information can be included after a colon, for example: “U-matic: S.” Types of U-matic include the smaller U-matic S and the high-quality U-matic SP.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Universal Media Disc:</div>
-            <div class="attribute-note">A digital optical disc video format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">V-Cord:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. If desired, format informatio can be included after a colon, for example: “V-Cord: I.” Types of V-Cord include V-Cord I and V-Cord II.
+        </li>
+      
+        <li>
+          <div id="UniversalMediaDisc" class="bolder vocab-term">Universal Media Disc:</div>
+          <div class="attribute-note">A digital optical disc video format.</div>
+        </li>
+      
+        <li>
+          <div id="VCord" class="bolder vocab-term">V-Cord:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. If desired, format informatio can be included after a colon, for example: “V-Cord: I.” Types of V-Cord include V-Cord I and V-Cord II.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">VHS:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. If desired, format information can be included after a colon, for example: “VHS: S-VHS.” Types of VHS include S-VHS, W-VHS and VHS-C.
+        </li>
+      
+        <li>
+          <div id="VHS" class="bolder vocab-term">VHS:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format. If desired, format information can be included after a colon, for example: “VHS: S-VHS.” Types of VHS include S-VHS, W-VHS and VHS-C.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Video8:</div>
-            <div class="attribute-note">A cassette-based 8mm analog videotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">VX:</div>
-            <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
-          </li>
-        
-      </ul>
-    
+        </li>
+      
+        <li>
+          <div id="Video8" class="bolder vocab-term">Video8:</div>
+          <div class="attribute-note">A cassette-based 8mm analog videotape format.</div>
+        </li>
+      
+        <li>
+          <div id="VX" class="bolder vocab-term">VX:</div>
+          <div class="attribute-note">A cassette-based 1/2-inch analog videotape format.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/page/1/vocabulary_id/464.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -705,12 +709,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

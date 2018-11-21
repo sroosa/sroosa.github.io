@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -237,7 +243,7 @@
 
           <div class="card-header" id="presentation1" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse1" aria-expanded="false" aria-controls="pres-collapse1">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>"More About PBCore: Using instantiationLocation and pbcoreExtension."
 </strong></span> Presented by Sadie Roosa and Morgan Morel in 2016: https://vimeo.com/168933596
 : </p>
@@ -259,7 +265,7 @@
 
           <div class="card-header" id="presentation2" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse2" aria-expanded="false" aria-controls="pres-collapse2">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>“PBCore RDF Ontology Hackathon”.
 </strong></span> Presented by Casey Davis at the 2015 Code4Lib conference in Portland, Oregon: &lt;http://www.slideshare.net/WGBH_Archives/pbcore-rdf-ontology-hackathon-code4lib-2015&gt;</p>
 
@@ -280,7 +286,7 @@
 
           <div class="card-header" id="presentation3" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse3" aria-expanded="false" aria-controls="pres-collapse3">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>"PBCore: A How-to and Why-to Webinar Recording."
 </strong></span> Presented by Casey Davis, Maureen McCormick, Sadie Roosa, and Morgan Morel in 2014: &lt;https://vimeo.com/109940772&gt;</p>
 
@@ -301,7 +307,7 @@
 
           <div class="card-header" id="presentation4" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse4" aria-expanded="false" aria-controls="pres-collapse4">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>"Pursuing PBCore: The Revitalization of a Schema and Community.”
 </strong></span> Presented by Jessica Bitely, Jack Brighton, Mary Miller, John Passmore, Dave MacCarn, and Casey Davis at the 2014 AMIA conference: &lt;http://www.slideshare.net/pbcore/pursuing-pbcore-the-revitalization-of-a-schema-and-community-amia-2014&gt;</p>
 
@@ -322,7 +328,7 @@
 
           <div class="card-header" id="presentation5" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse5" aria-expanded="false" aria-controls="pres-collapse5">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>“Implementing Metadata Standards for a Digital Audiovisual Preservation Repository”.
 </strong></span> Presentation by Kara Van Malssen in 2011: &lt;http://www.slideshare.net/kvanmalssen/implementing-metadata-standards-for-a-digital-audiovisual-preservation-repository&gt;</p>
 
@@ -343,7 +349,7 @@
 
           <div class="card-header" id="presentation6" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse6" aria-expanded="false" aria-controls="pres-collapse6">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>“Intro to PBCore Zen."
 </strong></span> Workshop presented by Jack Brighton at the 2011 AMIA conference: &lt;http://www.slideshare.net/JackBrighton/intro-to-pbcore-zen-pbcore-workshop-amia-2011-jack-brighton&gt;</p>
 
@@ -364,7 +370,7 @@
 
           <div class="card-header" id="presentation7" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse7" aria-expanded="false" aria-controls="pres-collapse7">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>“PBCore: Overview."
 </strong></span> Presentation by Dave MacCarn at the AMIA Open Source Solutions meeting in 2009: &lt;http://www.slideshare.net/cmichael/pbcore-overview&gt;</p>
 
@@ -385,7 +391,7 @@
 
           <div class="card-header" id="presentation8" style="border-bottom: 1px solid black !important; padding: 7px;">
               <a class="red collapsed" data-toggle="collapse" href="#pres-collapse8" aria-expanded="false" aria-controls="pres-collapse8">
-                <span class="faq-arrow-icon arrow-down"></span>
+                <span class="pres-arrow-icon pres-arrow-down"></span>
                 <p><span class="black"><strong>“PBCore, METS, PREMIS, MODS, METSRights, Oh My!”
 </strong></span> Presentation by Kara Van Malssen at 2008 AMIA conference: &lt;http://www.slideshare.net/kvanmalssen/pbcore-mets-premis-mods-metsrightsoh-my&gt;</p>
 
@@ -567,12 +573,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

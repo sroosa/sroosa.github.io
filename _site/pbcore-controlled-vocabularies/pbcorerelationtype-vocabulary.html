@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html","headline":"Pbcorerelationtype Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html","headline":"Pbcorerelationtype Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/pbcorerelationtype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,57 +319,55 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Has Derivative:</div>
-            <div class="attribute-note">The asset being described is the source for another asset which is based upon it (for example, a film and then a documentary about the making of that film).</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Derived From:</div>
-            <div class="attribute-note">The asset being described has another asset as its source (for example, a documentary about the making of a film).</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">References:</div>
-            <div class="attribute-note">The asset being described mentions, uses or discusses another asset (for example, a review program that discusses a recorded theatrical work).</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Referenced By:</div>
-            <div class="attribute-note">The asset being described is mentioned, used or discussed by another asset (for example, a recorded theatrical performance that is reviewed in another program).</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Related To:</div>
-            <div class="attribute-note">The asset being described is related somehow to the asset being pointed to in this relation element (for example, two programs related to the same topic). This should be used as a default if the specific relationship is unknown.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Part Of:</div>
-            <div class="attribute-note">The asset being described is part of the asset being pointed to in this relation element (for example, one segment of a multi-segment television program.) This relationship can also be described using pbcorePart.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Has Version:</div>
-            <div class="attribute-note">The asset being described has an alternate intellectual version (for example, a different edit, or in a different language) which is being pointed to by this relation element. Use this when the asset being described is the ‘official’ or ‘master’ version of the asset; if not, use ‘Is Version Of’ to point to the master.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Is Version Of:</div>
-            <div class="attribute-note">The asset being described is an alternate intellectual version (for example, a different edit, or in a different language) of the resource being pointed to by this relation element. Use this if the asset being described is not the ‘official’ or ‘master’ version of the asset; if it is the master version, use ‘Has Version.’</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="HasDerivative" class="bolder vocab-term">Has Derivative:</div>
+          <div class="attribute-note">The asset being described is the source for another asset which is based upon it (for example, a film and then a documentary about the making of that film).</div>
+        </li>
+      
+        <li>
+          <div id="DerivedFrom" class="bolder vocab-term">Derived From:</div>
+          <div class="attribute-note">The asset being described has another asset as its source (for example, a documentary about the making of a film).</div>
+        </li>
+      
+        <li>
+          <div id="References" class="bolder vocab-term">References:</div>
+          <div class="attribute-note">The asset being described mentions, uses or discusses another asset (for example, a review program that discusses a recorded theatrical work).</div>
+        </li>
+      
+        <li>
+          <div id="IsReferencedBy" class="bolder vocab-term">Is Referenced By:</div>
+          <div class="attribute-note">The asset being described is mentioned, used or discussed by another asset (for example, a recorded theatrical performance that is reviewed in another program).</div>
+        </li>
+      
+        <li>
+          <div id="IsRelatedTo" class="bolder vocab-term">Is Related To:</div>
+          <div class="attribute-note">The asset being described is related somehow to the asset being pointed to in this relation element (for example, two programs related to the same topic). This should be used as a default if the specific relationship is unknown.</div>
+        </li>
+      
+        <li>
+          <div id="IsPartOf" class="bolder vocab-term">Is Part Of:</div>
+          <div class="attribute-note">The asset being described is part of the asset being pointed to in this relation element (for example, one segment of a multi-segment television program.) This relationship can also be described using pbcorePart.</div>
+        </li>
+      
+        <li>
+          <div id="HasVersion" class="bolder vocab-term">Has Version:</div>
+          <div class="attribute-note">The asset being described has an alternate intellectual version (for example, a different edit, or in a different language) which is being pointed to by this relation element. Use this when the asset being described is the ‘official’ or ‘master’ version of the asset; if not, use ‘Is Version Of’ to point to the master.</div>
+        </li>
+      
+        <li>
+          <div id="IsVersionOf" class="bolder vocab-term">Is Version Of:</div>
+          <div class="attribute-note">The asset being described is an alternate intellectual version (for example, a different edit, or in a different language) of the resource being pointed to by this relation element. Use this if the asset being described is not the ‘official’ or ‘master’ version of the asset; if it is the master version, use ‘Has Version.’</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/vocabulary_id/458.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -527,12 +531,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/datetype-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/datetype-vocabulary.html","headline":"Datetype Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/datetype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/datetype-vocabulary.html","headline":"Datetype Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/datetype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -314,187 +320,185 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">accepted:</div>
-            <div class="attribute-note">Date of acceptance of an asset or instantiation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">available:</div>
-            <div class="attribute-note">Date (often a range) that the asset or instantiation became or will become available.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">available end:</div>
-            <div class="attribute-note">Date that the asset or instantiation became or will become unavailable.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">available start:</div>
-            <div class="attribute-note">Date that the asset or instantiation became or will become available.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">broadcast:</div>
-            <div class="attribute-note">Date the asset or instantiation was broadcast.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">captured:</div>
-            <div class="attribute-note">Date that the asset or instantiation was digitized or a subsequent snapshot was taken.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">created:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was created.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">copyright:</div>
-            <div class="attribute-note">Date associated with a claim of protection under copyright or a similar regime for the asset or instantiation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">deletion:</div>
-            <div class="attribute-note">Date an asset or instantiation was deleted.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">digitized:</div>
-            <div class="attribute-note">Date an asset or instantiation was digitized.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">distributed:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was distributed or released.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">dubbed:</div>
-            <div class="attribute-note">Date an asset or instantiation was dubbed.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">edited:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was edited.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">encoded:</div>
-            <div class="attribute-note">Date an asset or instantiation was encoded.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">encrypted:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was encrypted.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">event:</div>
-            <div class="attribute-note">Date, time or period of an event related to an asset or instantiation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">ingested:</div>
-            <div class="attribute-note">Date an asset or instantiation was added to a preservation repository. This is a PREMIS event suggestion.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">issued:</div>
-            <div class="attribute-note">Date of formal issuance (e.g. publication) of an asset or instantiation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">licensed:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was licensed.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">mastered:</div>
-            <div class="attribute-note">Date on which the asset or instantiation’s final master was created.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">migrated:</div>
-            <div class="attribute-note">Date an asset or instantiation was migrated to a new format. This is a PREMIS event suggestion.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">mixed:</div>
-            <div class="attribute-note">Date on which the asset or instantiation’s final mix was created.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">modified:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was last changed.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">normalized:</div>
-            <div class="attribute-note">Date an asset or instantiation was normalized to a preservation standard. This is a PREMIS event suggestion.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">performed:</div>
-            <div class="attribute-note">Date on which the intellectual content of an asset was performed live.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">podcast:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was webcast.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">published:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was published.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">released:</div>
-            <div class="attribute-note">The official release date of an asset or instantiation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">restored:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was restored.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">revised:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was revised.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">transferred:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was transferred from one location to another.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">valid:</div>
-            <div class="attribute-note">A date during which the content of an asset or instantiation is valid.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">validated:</div>
-            <div class="attribute-note">Date an asset or instantiation was confirmed to comply with documented information about the instantiation. This is a PREMIS event suggestion.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">webcast:</div>
-            <div class="attribute-note">Date on which the asset or instantiation was webcast.</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="accepted" class="bolder vocab-term">accepted:</div>
+          <div class="attribute-note">Date of acceptance of an asset or instantiation.</div>
+        </li>
+      
+        <li>
+          <div id="available" class="bolder vocab-term">available:</div>
+          <div class="attribute-note">Date (often a range) that the asset or instantiation became or will become available.</div>
+        </li>
+      
+        <li>
+          <div id="availableend" class="bolder vocab-term">available end:</div>
+          <div class="attribute-note">Date that the asset or instantiation became or will become unavailable.</div>
+        </li>
+      
+        <li>
+          <div id="availablestart" class="bolder vocab-term">available start:</div>
+          <div class="attribute-note">Date that the asset or instantiation became or will become available.</div>
+        </li>
+      
+        <li>
+          <div id="broadcast" class="bolder vocab-term">broadcast:</div>
+          <div class="attribute-note">Date the asset or instantiation was broadcast.</div>
+        </li>
+      
+        <li>
+          <div id="captured" class="bolder vocab-term">captured:</div>
+          <div class="attribute-note">Date that the asset or instantiation was digitized or a subsequent snapshot was taken.</div>
+        </li>
+      
+        <li>
+          <div id="created" class="bolder vocab-term">created:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was created.</div>
+        </li>
+      
+        <li>
+          <div id="copyright" class="bolder vocab-term">copyright:</div>
+          <div class="attribute-note">Date associated with a claim of protection under copyright or a similar regime for the asset or instantiation.</div>
+        </li>
+      
+        <li>
+          <div id="deletion" class="bolder vocab-term">deletion:</div>
+          <div class="attribute-note">Date an asset or instantiation was deleted.</div>
+        </li>
+      
+        <li>
+          <div id="digitized" class="bolder vocab-term">digitized:</div>
+          <div class="attribute-note">Date an asset or instantiation was digitized.</div>
+        </li>
+      
+        <li>
+          <div id="distributed" class="bolder vocab-term">distributed:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was distributed or released.</div>
+        </li>
+      
+        <li>
+          <div id="dubbed" class="bolder vocab-term">dubbed:</div>
+          <div class="attribute-note">Date an asset or instantiation was dubbed.</div>
+        </li>
+      
+        <li>
+          <div id="edited" class="bolder vocab-term">edited:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was edited.</div>
+        </li>
+      
+        <li>
+          <div id="encoded" class="bolder vocab-term">encoded:</div>
+          <div class="attribute-note">Date an asset or instantiation was encoded.</div>
+        </li>
+      
+        <li>
+          <div id="encrypted" class="bolder vocab-term">encrypted:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was encrypted.</div>
+        </li>
+      
+        <li>
+          <div id="event" class="bolder vocab-term">event:</div>
+          <div class="attribute-note">Date, time or period of an event related to an asset or instantiation.</div>
+        </li>
+      
+        <li>
+          <div id="ingested" class="bolder vocab-term">ingested:</div>
+          <div class="attribute-note">Date an asset or instantiation was added to a preservation repository. This is a PREMIS event suggestion.</div>
+        </li>
+      
+        <li>
+          <div id="issued" class="bolder vocab-term">issued:</div>
+          <div class="attribute-note">Date of formal issuance (e.g. publication) of an asset or instantiation.</div>
+        </li>
+      
+        <li>
+          <div id="licensed" class="bolder vocab-term">licensed:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was licensed.</div>
+        </li>
+      
+        <li>
+          <div id="mastered" class="bolder vocab-term">mastered:</div>
+          <div class="attribute-note">Date on which the asset or instantiation’s final master was created.</div>
+        </li>
+      
+        <li>
+          <div id="migrated" class="bolder vocab-term">migrated:</div>
+          <div class="attribute-note">Date an asset or instantiation was migrated to a new format. This is a PREMIS event suggestion.</div>
+        </li>
+      
+        <li>
+          <div id="mixed" class="bolder vocab-term">mixed:</div>
+          <div class="attribute-note">Date on which the asset or instantiation’s final mix was created.</div>
+        </li>
+      
+        <li>
+          <div id="modified" class="bolder vocab-term">modified:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was last changed.</div>
+        </li>
+      
+        <li>
+          <div id="normalized" class="bolder vocab-term">normalized:</div>
+          <div class="attribute-note">Date an asset or instantiation was normalized to a preservation standard. This is a PREMIS event suggestion.</div>
+        </li>
+      
+        <li>
+          <div id="performed" class="bolder vocab-term">performed:</div>
+          <div class="attribute-note">Date on which the intellectual content of an asset was performed live.</div>
+        </li>
+      
+        <li>
+          <div id="podcast" class="bolder vocab-term">podcast:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was webcast.</div>
+        </li>
+      
+        <li>
+          <div id="published" class="bolder vocab-term">published:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was published.</div>
+        </li>
+      
+        <li>
+          <div id="released" class="bolder vocab-term">released:</div>
+          <div class="attribute-note">The official release date of an asset or instantiation.</div>
+        </li>
+      
+        <li>
+          <div id="restored" class="bolder vocab-term">restored:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was restored.</div>
+        </li>
+      
+        <li>
+          <div id="revised" class="bolder vocab-term">revised:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was revised.</div>
+        </li>
+      
+        <li>
+          <div id="transferred" class="bolder vocab-term">transferred:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was transferred from one location to another.</div>
+        </li>
+      
+        <li>
+          <div id="valid" class="bolder vocab-term">valid:</div>
+          <div class="attribute-note">A date during which the content of an asset or instantiation is valid.</div>
+        </li>
+      
+        <li>
+          <div id="validated" class="bolder vocab-term">validated:</div>
+          <div class="attribute-note">Date an asset or instantiation was confirmed to comply with documented information about the instantiation. This is a PREMIS event suggestion.</div>
+        </li>
+      
+        <li>
+          <div id="webcast" class="bolder vocab-term">webcast:</div>
+          <div class="attribute-note">Date on which the asset or instantiation was webcast.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/vocabulary_id/455.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -658,12 +662,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

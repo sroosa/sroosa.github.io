@@ -105,16 +105,10 @@ a:hover {
 .footer-msg {
   font-size: 12px;
   font-weight: bold;
-}
-
-.footer-copyright {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.footer-copyright-sub {
-  color: #ccc;
-  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1em;
 }
 
 .footer-brand {
@@ -313,8 +307,8 @@ h2.med-title {
 }
 
 .pb-button {
-  padding-left: 1.8%;
-  padding-right: 1.8%;
+  padding-left: 6%;
+  padding-right: 6%;
   padding-top: 1.2%;
   padding-bottom: 1.2%;
 }
@@ -647,8 +641,13 @@ span.definition-icon {
 }
 
 .attribute-name {
-  // text-align: right !important;
+  text-align: right !important;
   font-size: 18px;
+}
+
+.vocab-term {
+  font-size: 18px;
+  color: black;
 }
 
 .attribute-note {
@@ -848,5 +847,16 @@ code[class*="language-"] {
 
 .carousel-item {
   min-height: 100%;
-  background-color: $grey
+  background-color: $grey;
+}
+
+.pb-user-list {
+  color: black;
+  text-align: left;
+}
+
+.carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
 }

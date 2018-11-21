@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html","headline":"Descriptiontype Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html","headline":"Descriptiontype Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/descriptiontype-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -314,137 +320,135 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Abstract:</div>
-            <div class="attribute-note">A summary of the contents of an asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Awards:</div>
-            <div class="attribute-note">A listing of any awards (i.e. Emmy, Golden Globe, Peabody) received by a production or asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Chapter:</div>
-            <div class="attribute-note">A main division of an asset, typically with a number or title.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Collection:</div>
-            <div class="attribute-note">A description of a group of materials with some unifying characteristic, such as materials assembled by a person, organization, or repository from a variety of sources.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Comments:</div>
-            <div class="attribute-note">More colloquial description, anecdotal comments, or reflections not typically viewable by staff outside the archives.  Could include comments about the preservation process (this asset was difficult to digitize, the two tape instantiations are damaged, etc.) or also include informal comments about the content (someone curses at minute 20, the content may upset some people, John Smith really likes this, etc.)</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Description:</div>
-            <div class="attribute-note">A general term for a description of the asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Episode Description:</div>
-            <div class="attribute-note">A description of a single installment of a television or radio series.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Event:</div>
-            <div class="attribute-note">A thing that happens in the intellectual content of an asset, especially one of importance.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Excerpt:</div>
-            <div class="attribute-note">A description of a short clip taken from a moving image or audio resource. An exerpt may not convey a complete intellectual concept.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Item:</div>
-            <div class="attribute-note">A description of a thing that can be distinguished from a group and that is complete in itself. An item may consist of several pieces, but is treated as a whole.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Movement:</div>
-            <div class="attribute-note">A principal division of a longer musical work, self-sufficient in terms of key, tempo, and structure.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Number:</div>
-            <div class="attribute-note">A song, dance, piece of music, etc., especially one of several in a performance.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Playlist:</div>
-            <div class="attribute-note">A list of the recordings to be played on the radio during a particular program or time period, often including their sequence, duration, etc.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Program:</div>
-            <div class="attribute-note">A description of an asset that has been prepared for broadcast/publication and is presented as a single work.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Reviews:</div>
-            <div class="attribute-note">Evaluations, opinions, or critical appraisals of a program or asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Rundown:</div>
-            <div class="attribute-note">A timeline or production cue-sheet for a TV or radio program.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Script:</div>
-            <div class="attribute-note">A document of the dialogue and direction used in the production of a program or asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Shot List:</div>
-            <div class="attribute-note">A document that lists, in chronological order, the sequences of footage used in the production of a program or asset.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Segment:</div>
-            <div class="attribute-note">A description of a self-contained portion of a program/episode, which serves its own function, but operates within the larger program/episode.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Series:</div>
-            <div class="attribute-note">A description of a set of episodes broadcast in sequence, usually conceived without a definte end and aired on a regular schedule. Typically all episodes within a single series follow a specific theme or continuous storyline, and are all broadcast under the same series title and branding.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Song:</div>
-            <div class="attribute-note">A short poem or other set of words set to music or meant to be sung.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Story:</div>
-            <div class="attribute-note">A report of an item of news in a newspaper, magazine, or news broadcast; may also be used to refer to a plot or story line.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Summary:</div>
-            <div class="attribute-note">A brief statement or account of the main points of something.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Transcript:</div>
-            <div class="attribute-note">A written document of the audio component of an audio or audiovisual asset.</div>
-          </li>
-        
-      </ul>
-    
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="Abstract" class="bolder vocab-term">Abstract:</div>
+          <div class="attribute-note">A summary of the contents of an asset.</div>
+        </li>
+      
+        <li>
+          <div id="Awards" class="bolder vocab-term">Awards:</div>
+          <div class="attribute-note">A listing of any awards (i.e. Emmy, Golden Globe, Peabody) received by a production or asset.</div>
+        </li>
+      
+        <li>
+          <div id="Chapter" class="bolder vocab-term">Chapter:</div>
+          <div class="attribute-note">A main division of an asset, typically with a number or title.</div>
+        </li>
+      
+        <li>
+          <div id="Collection" class="bolder vocab-term">Collection:</div>
+          <div class="attribute-note">A description of a group of materials with some unifying characteristic, such as materials assembled by a person, organization, or repository from a variety of sources.</div>
+        </li>
+      
+        <li>
+          <div id="Comments" class="bolder vocab-term">Comments:</div>
+          <div class="attribute-note">More colloquial description, anecdotal comments, or reflections not typically viewable by staff outside the archives.  Could include comments about the preservation process (this asset was difficult to digitize, the two tape instantiations are damaged, etc.) or also include informal comments about the content (someone curses at minute 20, the content may upset some people, John Smith really likes this, etc.)</div>
+        </li>
+      
+        <li>
+          <div id="Description" class="bolder vocab-term">Description:</div>
+          <div class="attribute-note">A general term for a description of the asset.</div>
+        </li>
+      
+        <li>
+          <div id="EpisodeDescription" class="bolder vocab-term">Episode Description:</div>
+          <div class="attribute-note">A description of a single installment of a television or radio series.</div>
+        </li>
+      
+        <li>
+          <div id="Event" class="bolder vocab-term">Event:</div>
+          <div class="attribute-note">A thing that happens in the intellectual content of an asset, especially one of importance.</div>
+        </li>
+      
+        <li>
+          <div id="Excerpt" class="bolder vocab-term">Excerpt:</div>
+          <div class="attribute-note">A description of a short clip taken from a moving image or audio resource. An exerpt may not convey a complete intellectual concept.</div>
+        </li>
+      
+        <li>
+          <div id="Item" class="bolder vocab-term">Item:</div>
+          <div class="attribute-note">A description of a thing that can be distinguished from a group and that is complete in itself. An item may consist of several pieces, but is treated as a whole.</div>
+        </li>
+      
+        <li>
+          <div id="Movement" class="bolder vocab-term">Movement:</div>
+          <div class="attribute-note">A principal division of a longer musical work, self-sufficient in terms of key, tempo, and structure.</div>
+        </li>
+      
+        <li>
+          <div id="Number" class="bolder vocab-term">Number:</div>
+          <div class="attribute-note">A song, dance, piece of music, etc., especially one of several in a performance.</div>
+        </li>
+      
+        <li>
+          <div id="Playlist" class="bolder vocab-term">Playlist:</div>
+          <div class="attribute-note">A list of the recordings to be played on the radio during a particular program or time period, often including their sequence, duration, etc.</div>
+        </li>
+      
+        <li>
+          <div id="Program" class="bolder vocab-term">Program:</div>
+          <div class="attribute-note">A description of an asset that has been prepared for broadcast/publication and is presented as a single work.</div>
+        </li>
+      
+        <li>
+          <div id="Reviews" class="bolder vocab-term">Reviews:</div>
+          <div class="attribute-note">Evaluations, opinions, or critical appraisals of a program or asset.</div>
+        </li>
+      
+        <li>
+          <div id="Rundown" class="bolder vocab-term">Rundown:</div>
+          <div class="attribute-note">A timeline or production cue-sheet for a TV or radio program.</div>
+        </li>
+      
+        <li>
+          <div id="Script" class="bolder vocab-term">Script:</div>
+          <div class="attribute-note">A document of the dialogue and direction used in the production of a program or asset.</div>
+        </li>
+      
+        <li>
+          <div id="Segment" class="bolder vocab-term">Segment:</div>
+          <div class="attribute-note">A description of a self-contained portion of a program/episode, which serves its own function, but operates within the larger program/episode.</div>
+        </li>
+      
+        <li>
+          <div id="Series" class="bolder vocab-term">Series:</div>
+          <div class="attribute-note">A description of a set of episodes broadcast in sequence, usually conceived without a definte end and aired on a regular schedule. Typically all episodes within a single series follow a specific theme or continuous storyline, and are all broadcast under the same series title and branding.</div>
+        </li>
+      
+        <li>
+          <div id="" class="bolder vocab-term">Shot List:</div>
+          <div class="attribute-note">A document that lists, in chronological order, the sequences of footage used in the production of a program or asset.</div>
+        </li>
+      
+        <li>
+          <div id="Song" class="bolder vocab-term">Song:</div>
+          <div class="attribute-note">A short poem or other set of words set to music or meant to be sung.</div>
+        </li>
+      
+        <li>
+          <div id="Story" class="bolder vocab-term">Story:</div>
+          <div class="attribute-note">A report of an item of news in a newspaper, magazine, or news broadcast; may also be used to refer to a plot or story line.</div>
+        </li>
+      
+        <li>
+          <div id="Summary" class="bolder vocab-term">Summary:</div>
+          <div class="attribute-note">A brief statement or account of the main points of something.</div>
+        </li>
+      
+        <li>
+          <div id="Transcript" class="bolder vocab-term">Transcript:</div>
+          <div class="attribute-note">A written document of the audio component of an audio or audiovisual asset.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/page/1/vocabulary_id/456.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -608,12 +612,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 

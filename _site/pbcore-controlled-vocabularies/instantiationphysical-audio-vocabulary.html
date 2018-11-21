@@ -18,8 +18,14 @@
     $(document).ready(function() {
       hljs.configure({useBR: true});hljs.initHighlightingOnLoad();
 
-      $('.element-arrow-icon, .faq-arrow-icon').click(function(e){
-        var start = $(this).hasClass('element-arrow-icon') ? 'element-' : '';
+      $('.element-arrow-icon, .faq-arrow-icon, .pres-arrow-icon').click(function(e){
+        var start = ''
+        if($(this).hasClass('element-arrow-icon')){
+          var start = 'element-'
+        }
+        else if($(this).hasClass('pres-arrow-icon')){
+          var start = 'pres-'
+        }
         if($(this).hasClass(start+'arrow-down')){
           $(this).removeClass(start+'arrow-down').addClass(start+'arrow-up')
         }
@@ -69,9 +75,9 @@
 <meta property="og:url" content="http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html" />
 <meta property="og:site_name" content="PBCore Metadata Standard" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-11-16T16:23:41-05:00" />
+<meta property="article:published_time" content="2018-11-21T09:06:56-05:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html","headline":"Instantiationphysical Audio Vocabulary","dateModified":"2018-11-16T16:23:41-05:00","datePublished":"2018-11-16T16:23:41-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html","headline":"Instantiationphysical Audio Vocabulary","dateModified":"2018-11-21T09:06:56-05:00","datePublished":"2018-11-21T09:06:56-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pbcore-controlled-vocabularies/instantiationphysical-audio-vocabulary.html"},"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -313,165 +319,163 @@
       </div>
     </div>
 
-    
-      <h3 class="green">Terms</h3>
+    <h3 class="green">Terms</h3>
 
-      <ul class="attribute-container" style="padding-left: 1em;">
-        
-          <li>
-            <div class="bolder attribute-name">Open reel audiotape:</div>
-            <div class="attribute-note">A general term for unknown open reel audio formats. If more specific format information is known, please use the appropriate term from the list.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Grooved analog disc:</div>
-            <div class="attribute-note">A general term for unknown grooved audio formats. If more specific format information is known, please use the appropriate term from the list.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1 inch audio tape:</div>
-            <div class="attribute-note">An open reel analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1/2 inch aduio cassette:</div>
-            <div class="attribute-note">An open reel analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1/4 inch audio cassette:</div>
-            <div class="attribute-note">A cassette-based analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">1/4 inch audio tape:</div>
-            <div class="attribute-note">An open reel analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">2 inch audio tape:</div>
-            <div class="attribute-note">An open reel analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">8-track:</div>
-            <div class="attribute-note">A cartridge-based 1/4-inch analog audiotape format. May also be known as Stereo 8.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Aluminum disc:</div>
-            <div class="attribute-note">A grooved aluminum analog disc format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Audio cassette:</div>
-            <div class="attribute-note">A cassette-based 1/8-inch analog audiotape format. If desired, format information can be included after a colon, for example "Audio cassette: Type I." Types of audio cassette include Type I, Type II, Type III and Type IV.
+    <ul class="attribute-container" style="padding-left: 1em;">
+      
+        <li>
+          <div id="OpenReelAudiotape" class="bolder vocab-term">Open reel audiotape:</div>
+          <div class="attribute-note">A general term for unknown open reel audio formats. If more specific format information is known, please use the appropriate term from the list.</div>
+        </li>
+      
+        <li>
+          <div id="GroovedAnalogDisc" class="bolder vocab-term">Grooved analog disc:</div>
+          <div class="attribute-note">A general term for unknown grooved audio formats. If more specific format information is known, please use the appropriate term from the list.</div>
+        </li>
+      
+        <li>
+          <div id="1InchAudioTape" class="bolder vocab-term">1 inch audio tape:</div>
+          <div class="attribute-note">An open reel analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="HalfInchAudioTape" class="bolder vocab-term">1/2 inch aduio cassette:</div>
+          <div class="attribute-note">An open reel analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="QuarterInchAudioCassette" class="bolder vocab-term">1/4 inch audio cassette:</div>
+          <div class="attribute-note">A cassette-based analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="QuarterInchAudioTape" class="bolder vocab-term">1/4 inch audio tape:</div>
+          <div class="attribute-note">An open reel analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="2InchAudioTape" class="bolder vocab-term">2 inch audio tape:</div>
+          <div class="attribute-note">An open reel analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="8Track" class="bolder vocab-term">8-track:</div>
+          <div class="attribute-note">A cartridge-based 1/4-inch analog audiotape format. May also be known as Stereo 8.</div>
+        </li>
+      
+        <li>
+          <div id="AluminumDisc" class="bolder vocab-term">Aluminum disc:</div>
+          <div class="attribute-note">A grooved aluminum analog disc format.</div>
+        </li>
+      
+        <li>
+          <div id="AudioCassette" class="bolder vocab-term">Audio cassette:</div>
+          <div class="attribute-note">A cassette-based 1/8-inch analog audiotape format. If desired, format information can be included after a colon, for example "Audio cassette: Type I." Types of audio cassette include Type I, Type II, Type III and Type IV.
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Audio CD:</div>
-            <div class="attribute-note">An optical disc-based digital audio format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DAT:</div>
-            <div class="attribute-note">A cassette-based 4mm digital audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DDS:</div>
-            <div class="attribute-note">A cassette-based digital data format that can also be used to record audio data.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">DTRS:</div>
-            <div class="attribute-note">A cassette-based 8mm digital audiotape format. May also be known as DARS. Types of DTRS include DA-88. This information can be included after a colon, as “DTRS: DA-88.”
+        </li>
+      
+        <li>
+          <div id="AudioCD" class="bolder vocab-term">Audio CD:</div>
+          <div class="attribute-note">An optical disc-based digital audio format.</div>
+        </li>
+      
+        <li>
+          <div id="DAT" class="bolder vocab-term">DAT:</div>
+          <div class="attribute-note">A cassette-based 4mm digital audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="DDS" class="bolder vocab-term">DDS:</div>
+          <div class="attribute-note">A cassette-based digital data format that can also be used to record audio data.</div>
+        </li>
+      
+        <li>
+          <div id="DTRS" class="bolder vocab-term">DTRS:</div>
+          <div class="attribute-note">A cassette-based 8mm digital audiotape format. May also be known as DARS. Types of DTRS include DA-88. This information can be included after a colon, as “DTRS: DA-88.”
 </div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Flexi Disc:</div>
-            <div class="attribute-note">A grooved vinyl analog disc format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Grooved Dictabelt:</div>
-            <div class="attribute-note">A grooved plastic analog format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Lacquer disc:</div>
-            <div class="attribute-note">A grooved lacquer analog disc format. Types of lacquer discs may include those with aluminum base, glass base, cardboard base, and steel base. More specific format information can be included in an annotation.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Magnetic Dictabelt:</div>
-            <div class="attribute-note">A magnetic plastic analog format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Mini-cassette:</div>
-            <div class="attribute-note">A cassette-based 1/8-inch analog audiotape format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">PCM Betamax:</div>
-            <div class="attribute-note">A cassette-based digital audiotape format recorded onto Betamax videotape.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">PCM U-matic:</div>
-            <div class="attribute-note">A cassette-based digital audiotape format recorded onto U-matic videotape.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">PCM VHS:</div>
-            <div class="attribute-note">A cassette-based digital audiotape format recorded onto VHS videotape.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Piano roll:</div>
-            <div class="attribute-note">A paper-based musical storage format used to operate a player piano.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Plastic cylinder:</div>
-            <div class="attribute-note">A grooved plastic analog phonograph cylinder format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Shellac disc:</div>
-            <div class="attribute-note">A grooved shellac analog disc format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Super Audio CD:</div>
-            <div class="attribute-note">An optical disc-based digital audio format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Wax cylinder:</div>
-            <div class="attribute-note">A grooved wax analog phonograph cylinder format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Wire recording:</div>
-            <div class="attribute-note">A wire-based magnetic analog audio format.</div>
-          </li>
-        
-          <li>
-            <div class="bolder attribute-name">Vinyl recording:</div>
-            <div class="attribute-note">A grooved vinyl analog disc format. If desired, format information can be included after a colon, for example: “Vinyl record: EP.” Types of records may include EP, LP, 45, 78. LP may also be known as 33 1/3.
+        </li>
+      
+        <li>
+          <div id="FlexiDisc" class="bolder vocab-term">Flexi Disc:</div>
+          <div class="attribute-note">A grooved vinyl analog disc format.</div>
+        </li>
+      
+        <li>
+          <div id="GroovedDictabelt" class="bolder vocab-term">Grooved Dictabelt:</div>
+          <div class="attribute-note">A grooved plastic analog format.</div>
+        </li>
+      
+        <li>
+          <div id="LacquerDisc" class="bolder vocab-term">Lacquer disc:</div>
+          <div class="attribute-note">A grooved lacquer analog disc format. Types of lacquer discs may include those with aluminum base, glass base, cardboard base, and steel base. More specific format information can be included in an annotation.</div>
+        </li>
+      
+        <li>
+          <div id="MagneticDictabelt" class="bolder vocab-term">Magnetic Dictabelt:</div>
+          <div class="attribute-note">A magnetic plastic analog format.</div>
+        </li>
+      
+        <li>
+          <div id="MiniCassette" class="bolder vocab-term">Mini-cassette:</div>
+          <div class="attribute-note">A cassette-based 1/8-inch analog audiotape format.</div>
+        </li>
+      
+        <li>
+          <div id="PCMBetamax" class="bolder vocab-term">PCM Betamax:</div>
+          <div class="attribute-note">A cassette-based digital audiotape format recorded onto Betamax videotape.</div>
+        </li>
+      
+        <li>
+          <div id="PCMUmatic" class="bolder vocab-term">PCM U-matic:</div>
+          <div class="attribute-note">A cassette-based digital audiotape format recorded onto U-matic videotape.</div>
+        </li>
+      
+        <li>
+          <div id="PCMVHS" class="bolder vocab-term">PCM VHS:</div>
+          <div class="attribute-note">A cassette-based digital audiotape format recorded onto VHS videotape.</div>
+        </li>
+      
+        <li>
+          <div id="PianoRoll" class="bolder vocab-term">Piano roll:</div>
+          <div class="attribute-note">A paper-based musical storage format used to operate a player piano.</div>
+        </li>
+      
+        <li>
+          <div id="PlasticCylinder" class="bolder vocab-term">Plastic cylinder:</div>
+          <div class="attribute-note">A grooved plastic analog phonograph cylinder format.</div>
+        </li>
+      
+        <li>
+          <div id="ShellacDisc" class="bolder vocab-term">Shellac disc:</div>
+          <div class="attribute-note">A grooved shellac analog disc format.</div>
+        </li>
+      
+        <li>
+          <div id="SuperAudioCD" class="bolder vocab-term">Super Audio CD:</div>
+          <div class="attribute-note">An optical disc-based digital audio format.</div>
+        </li>
+      
+        <li>
+          <div id="VinylRecording" class="bolder vocab-term">Vinyl recording:</div>
+          <div class="attribute-note">A grooved vinyl analog disc format. If desired, format information can be included after a colon, for example: “Vinyl record: EP.” Types of records may include EP, LP, 45, 78. LP may also be known as 33 1/3.
 </div>
-          </li>
-        
-      </ul>
-    
+        </li>
+      
+        <li>
+          <div id="WaxCylinder" class="bolder vocab-term">Wax cylinder:</div>
+          <div class="attribute-note">A grooved wax analog phonograph cylinder format.</div>
+        </li>
+      
+        <li>
+          <div id="WireRecording" class="bolder vocab-term">Wire recording:</div>
+          <div class="attribute-note">A wire-based magnetic analog audio format.</div>
+        </li>
+      
+    </ul>
 
-    <!-- <h3 class="green">Example</h3> -->
     
 
+    <p>View on the <a class="green" href="http://metadataregistry.org/concept/list/page/1/vocabulary_id/462.html">Open Metadata Registry</a></p>
   </div>
 </div>
 
@@ -635,12 +639,10 @@
     <div class="row">
       <div class="col-md-6" style="top: -1.2em;">
         <img class="footer-brand" src="/assets/images/pbcore-logo.png"/>
-        <div class="footer-copyright">PBCore</div>
-        <div class="footer-copyright-sub">Public Broadcasting Metadata Dictionary Project</div>
       </div>
 
       <div class="col-md-6 footer-msg">
-        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license. Users may share the material in any medium or format and adapt or build upon the material for any purpose, even commercially. To do so, you must give an appropriate attribution, provide a link to the license, and indicate if changes were made.
+        PBCore, the Public Broadcasting Metadata Dictionary, is licensed under a Creative Commons Attribution 4.0 International license.
       </div>
     </div>
 
